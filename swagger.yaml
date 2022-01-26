@@ -944,12 +944,12 @@ paths:
       - jwt_header_Authorization:
         - api:read
         - api:write
-  /tracking-info/tracking_number:
+  /track:
     get:
       tags:
-      - track_mapping
-      summary: get track_mapping
-      operationId: track_mapping#get
+      - track
+      summary: get track info
+      operationId: track#get
       parameters:
       - name: tracking_number
         in: query
@@ -2519,8 +2519,8 @@ components:
 tags:
 - name: quote
   description: The quote service performs operations on quotation
-- name: track_mapping
-  description: The track mapping service performs operations on track order status
+- name: track
+  description: The track service performs operations on track order status
 - name: order
   description: The order service performs operations on order
 - name: file
