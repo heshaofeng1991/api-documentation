@@ -8,10 +8,10 @@ servers:
     version:
       default: v1
 paths:
-  /batches_create_product:
+  /products:
     post:
       tags:
-      - product
+        - product
       summary: batches_create_product product
       operationId: product#batches_create_product
       requestBody:
@@ -22,106 +22,56 @@ paths:
               $ref: '#/components/schemas/BatchesCreateProductRequestBody'
             example:
               products:
-              - Authorization: Laborum occaecati.
-                barcode: xxx
-                declared_cn_name: xxx
-                declared_en_name: xxx
-                declared_value_in_usd: 50
-                height: 2
-                hs_code: xxx
-                length: 1
-                nss_sku: xxx
-                product_attributes:
-                - normal
-                - liquid
-                - battery
-                - economic
-                - magnetic
-                product_image: url
-                product_name: xxx
-                qty: 1
-                tags:
-                - Made In China
-                - Date
-                token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ
-                weight: 10
-                width: 1
-                with_barcode: false
-              - Authorization: Laborum occaecati.
-                barcode: xxx
-                declared_cn_name: xxx
-                declared_en_name: xxx
-                declared_value_in_usd: 50
-                height: 2
-                hs_code: xxx
-                length: 1
-                nss_sku: xxx
-                product_attributes:
-                - normal
-                - liquid
-                - battery
-                - economic
-                - magnetic
-                product_image: url
-                product_name: xxx
-                qty: 1
-                tags:
-                - Made In China
-                - Date
-                token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ
-                weight: 10
-                width: 1
-                with_barcode: false
-              - Authorization: Laborum occaecati.
-                barcode: xxx
-                declared_cn_name: xxx
-                declared_en_name: xxx
-                declared_value_in_usd: 50
-                height: 2
-                hs_code: xxx
-                length: 1
-                nss_sku: xxx
-                product_attributes:
-                - normal
-                - liquid
-                - battery
-                - economic
-                - magnetic
-                product_image: url
-                product_name: xxx
-                qty: 1
-                tags:
-                - Made In China
-                - Date
-                token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ
-                weight: 10
-                width: 1
-                with_barcode: false
-              - Authorization: Laborum occaecati.
-                barcode: xxx
-                declared_cn_name: xxx
-                declared_en_name: xxx
-                declared_value_in_usd: 50
-                height: 2
-                hs_code: xxx
-                length: 1
-                nss_sku: xxx
-                product_attributes:
-                - normal
-                - liquid
-                - battery
-                - economic
-                - magnetic
-                product_image: url
-                product_name: xxx
-                qty: 1
-                tags:
-                - Made In China
-                - Date
-                token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ
-                weight: 10
-                width: 1
-                with_barcode: false
+                - Authorization: Aut rem ipsa.
+                  barcode: xxx
+                  declared_cn_name: xxx
+                  declared_en_name: xxx
+                  declared_value_in_usd: 50
+                  height: 2
+                  hs_code: xxx
+                  length: 1
+                  nss_sku: xxx
+                  product_attributes:
+                    - normal
+                    - liquid
+                    - battery
+                    - cosmetic
+                    - magnetic
+                  product_image: url
+                  product_name: xxx
+                  qty: 1
+                  tags:
+                    - Made In China
+                    - Date
+                  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ
+                  weight: 10
+                  width: 1
+                  with_barcode: false
+                - Authorization: Aut rem ipsa.
+                  barcode: xxx
+                  declared_cn_name: xxx
+                  declared_en_name: xxx
+                  declared_value_in_usd: 50
+                  height: 2
+                  hs_code: xxx
+                  length: 1
+                  nss_sku: xxx
+                  product_attributes:
+                    - normal
+                    - liquid
+                    - battery
+                    - cosmetic
+                    - magnetic
+                  product_image: url
+                  product_name: xxx
+                  qty: 1
+                  tags:
+                    - Made In China
+                    - Date
+                  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ
+                  weight: 10
+                  width: 1
+                  with_barcode: false
       responses:
         "200":
           description: OK response.
@@ -130,65 +80,36 @@ paths:
               schema:
                 $ref: '#/components/schemas/MultiProductRsp'
               example:
-                product_ids:
-                - 8641589280568653338
-                - 7473166505410638200
-                - 7881194795178706780
-                - 1885644803235876689
+                results:
+                  - barcode: Sit laudantium.
+                    error_msg: Impedit deleniti dolores similique perferendis.
+                    product_id: 2639358370529428143
+                    product_name: Ex quos expedita architecto.
+                    sku: Assumenda fugit exercitationem nesciunt eveniet.
+                    status: Rerum officiis explicabo et ut ut.
+                  - barcode: Sit laudantium.
+                    error_msg: Impedit deleniti dolores similique perferendis.
+                    product_id: 2639358370529428143
+                    product_name: Ex quos expedita architecto.
+                    sku: Assumenda fugit exercitationem nesciunt eveniet.
+                    status: Rerum officiis explicabo et ut ut.
+                  - barcode: Sit laudantium.
+                    error_msg: Impedit deleniti dolores similique perferendis.
+                    product_id: 2639358370529428143
+                    product_name: Ex quos expedita architecto.
+                    sku: Assumenda fugit exercitationem nesciunt eveniet.
+                    status: Rerum officiis explicabo et ut ut.
+                  - barcode: Sit laudantium.
+                    error_msg: Impedit deleniti dolores similique perferendis.
+                    product_id: 2639358370529428143
+                    product_name: Ex quos expedita architecto.
+                    sku: Assumenda fugit exercitationem nesciunt eveniet.
+                    status: Rerum officiis explicabo et ut ut.
       security:
-      - jwt_header_Authorization:
-        - api:read
-        - api:write
-  /create_product:
-    post:
-      tags:
-      - product
-      summary: create_product product
-      operationId: product#create_product
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/CreateProductRequestBody'
-            example:
-              barcode: xxx
-              declared_cn_name: xxx
-              declared_en_name: xxx
-              declared_value_in_usd: 50
-              height: 2
-              hs_code: xxx
-              length: 1
-              nss_sku: xxx
-              product_attributes:
-              - normal
-              - liquid
-              - battery
-              - economic
-              - magnetic
-              product_image: url
-              product_name: xxx
-              qty: 1
-              tags:
-              - Made In China
-              - Date
-              weight: 10
-              width: 1
-              with_barcode: false
-      responses:
-        "200":
-          description: OK response.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ProductRsp'
-              example:
-                product_id: 1
-      security:
-      - jwt_header_Authorization:
-        - api:read
-        - api:write
-  /inbound-order:
+        - jwt_header_Authorization:
+            - api:read
+            - api:write
+  /inbound-orders:
     get:
       tags:
       - order
@@ -355,7 +276,7 @@ paths:
       - jwt_header_Authorization:
         - api:read
         - api:write
-  /outbound-order:
+  /outbound-orders:
     get:
       tags:
       - order
@@ -1885,27 +1806,98 @@ components:
       - product_sku
       - barcode
       - qty
+    MultiProductData:
+      type: object
+      properties:
+        barcode:
+          type: string
+          description: barcode
+          example: Unde similique modi.
+        error_msg:
+          type: string
+          description: error msg
+          example: Aspernatur adipisci cum et rem ipsam et.
+        product_id:
+          type: integer
+          description: product id
+          example: 263470331117365817
+          format: int64
+        product_name:
+          type: string
+          description: product_name
+          example: Eligendi excepturi accusamus molestiae ut et nihil.
+        sku:
+          type: string
+          description: sku
+          example: Adipisci rem est temporibus.
+        status:
+          type: string
+          description: status
+          example: Voluptatem est quibusdam id quis sed ducimus.
+      description: MultiProductRsp describes the multi product info
+      example:
+        barcode: Officiis sequi veniam.
+        error_msg: Inventore excepturi.
+        product_id: 8863064327069470375
+        product_name: Rerum et eveniet inventore.
+        sku: Deserunt qui sit est beatae veniam.
+        status: Quis incidunt magnam sunt recusandae sit distinctio.
+      required:
+        - product_id
+        - status
+        - error_msg
+        - barcode
+        - sku
+        - product_name
     MultiProductRsp:
       type: object
       properties:
-        product_ids:
+        results:
           type: array
           items:
-            type: integer
-            example: 4941612452030963511
-            format: int64
-          description: product id list
+            $ref: '#/components/schemas/MultiProductData'
+          description: results
           example:
-          - 8225001883023772326
-          - 5409008217726344049
-          - 7479173688516675191
+            - barcode: Sit laudantium.
+              error_msg: Impedit deleniti dolores similique perferendis.
+              product_id: 2639358370529428143
+              product_name: Ex quos expedita architecto.
+              sku: Assumenda fugit exercitationem nesciunt eveniet.
+              status: Rerum officiis explicabo et ut ut.
+            - barcode: Sit laudantium.
+              error_msg: Impedit deleniti dolores similique perferendis.
+              product_id: 2639358370529428143
+              product_name: Ex quos expedita architecto.
+              sku: Assumenda fugit exercitationem nesciunt eveniet.
+              status: Rerum officiis explicabo et ut ut.
+            - barcode: Sit laudantium.
+              error_msg: Impedit deleniti dolores similique perferendis.
+              product_id: 2639358370529428143
+              product_name: Ex quos expedita architecto.
+              sku: Assumenda fugit exercitationem nesciunt eveniet.
+              status: Rerum officiis explicabo et ut ut.
       example:
-        product_ids:
-        - 5864813877090209646
-        - 4954021380006476194
-        - 4647368746271932315
+        results:
+          - barcode: Sit laudantium.
+            error_msg: Impedit deleniti dolores similique perferendis.
+            product_id: 2639358370529428143
+            product_name: Ex quos expedita architecto.
+            sku: Assumenda fugit exercitationem nesciunt eveniet.
+            status: Rerum officiis explicabo et ut ut.
+          - barcode: Sit laudantium.
+            error_msg: Impedit deleniti dolores similique perferendis.
+            product_id: 2639358370529428143
+            product_name: Ex quos expedita architecto.
+            sku: Assumenda fugit exercitationem nesciunt eveniet.
+            status: Rerum officiis explicabo et ut ut.
+          - barcode: Sit laudantium.
+            error_msg: Impedit deleniti dolores similique perferendis.
+            product_id: 2639358370529428143
+            product_name: Ex quos expedita architecto.
+            sku: Assumenda fugit exercitationem nesciunt eveniet.
+            status: Rerum officiis explicabo et ut ut.
       required:
-      - product_ids
+        - results
     OrderRsp:
       type: object
       properties:
