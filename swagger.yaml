@@ -112,21 +112,21 @@ paths:
   /inbound-orders:
     get:
       tags:
-      - order
+        - order
       summary: get_inbound_order order
       operationId: order#get_inbound_order
       parameters:
-      - name: client_order_id
-        in: query
-        description: client_order_id
-        allowEmptyValue: true
-        required: true
-        schema:
-          type: string
+        - name: client_order_id
+          in: query
           description: client_order_id
+          allowEmptyValue: true
+          required: true
+          schema:
+            type: string
+            description: client_order_id
+            example: xxx1234
+            maxLength: 50
           example: xxx1234
-          maxLength: 50
-        example: xxx1234
       responses:
         "200":
           description: OK response.
@@ -137,88 +137,124 @@ paths:
                 items:
                   $ref: '#/components/schemas/InboundOrderResponse'
                 example:
-                - client_order_id: xxx1234
-                  items:
-                  - barcode: YCrankshaft
-                    product_name: NSS Mate 40E
-                    product_sku: YCrankshaft
-                    qty: 3
-                  - barcode: YCrankshaft
-                    product_name: NSS Mate 40E
-                    product_sku: YCrankshaft
-                    qty: 3
-                  - barcode: YCrankshaft
-                    product_name: NSS Mate 40E
-                    product_sku: YCrankshaft
-                    qty: 3
-                  platform_order_id: 123
-                  status: 1
-                  tracking_number: Quasi atque deserunt voluptatum facilis impedit
-                    ipsam.
-                  tracking_url: Iste et inventore est.
-                - client_order_id: xxx1234
-                  items:
-                  - barcode: YCrankshaft
-                    product_name: NSS Mate 40E
-                    product_sku: YCrankshaft
-                    qty: 3
-                  - barcode: YCrankshaft
-                    product_name: NSS Mate 40E
-                    product_sku: YCrankshaft
-                    qty: 3
-                  - barcode: YCrankshaft
-                    product_name: NSS Mate 40E
-                    product_sku: YCrankshaft
-                    qty: 3
-                  platform_order_id: 123
-                  status: 1
-                  tracking_number: Quasi atque deserunt voluptatum facilis impedit
-                    ipsam.
-                  tracking_url: Iste et inventore est.
+                  - client_order_id: xxx1234
+                    items:
+                      - barcode: YCrankshaft
+                        product_name: NSS Mate 40E
+                        product_sku: YCrankshaft
+                        qty: 3
+                      - barcode: YCrankshaft
+                        product_name: NSS Mate 40E
+                        product_sku: YCrankshaft
+                        qty: 3
+                      - barcode: YCrankshaft
+                        product_name: NSS Mate 40E
+                        product_sku: YCrankshaft
+                        qty: 3
+                      - barcode: YCrankshaft
+                        product_name: NSS Mate 40E
+                        product_sku: YCrankshaft
+                        qty: 3
+                    platform_order_id: 123
+                    status: 1
+                    tracking_number: Doloremque corrupti vero possimus.
+                    tracking_url: Enim sunt.
+                  - client_order_id: xxx1234
+                    items:
+                      - barcode: YCrankshaft
+                        product_name: NSS Mate 40E
+                        product_sku: YCrankshaft
+                        qty: 3
+                      - barcode: YCrankshaft
+                        product_name: NSS Mate 40E
+                        product_sku: YCrankshaft
+                        qty: 3
+                      - barcode: YCrankshaft
+                        product_name: NSS Mate 40E
+                        product_sku: YCrankshaft
+                        qty: 3
+                      - barcode: YCrankshaft
+                        product_name: NSS Mate 40E
+                        product_sku: YCrankshaft
+                        qty: 3
+                    platform_order_id: 123
+                    status: 1
+                    tracking_number: Doloremque corrupti vero possimus.
+                    tracking_url: Enim sunt.
               example:
-              - client_order_id: xxx1234
-                items:
-                - barcode: YCrankshaft
-                  product_name: NSS Mate 40E
-                  product_sku: YCrankshaft
-                  qty: 3
-                - barcode: YCrankshaft
-                  product_name: NSS Mate 40E
-                  product_sku: YCrankshaft
-                  qty: 3
-                - barcode: YCrankshaft
-                  product_name: NSS Mate 40E
-                  product_sku: YCrankshaft
-                  qty: 3
-                platform_order_id: 123
-                status: 1
-                tracking_number: Quasi atque deserunt voluptatum facilis impedit ipsam.
-                tracking_url: Iste et inventore est.
-              - client_order_id: xxx1234
-                items:
-                - barcode: YCrankshaft
-                  product_name: NSS Mate 40E
-                  product_sku: YCrankshaft
-                  qty: 3
-                - barcode: YCrankshaft
-                  product_name: NSS Mate 40E
-                  product_sku: YCrankshaft
-                  qty: 3
-                - barcode: YCrankshaft
-                  product_name: NSS Mate 40E
-                  product_sku: YCrankshaft
-                  qty: 3
-                platform_order_id: 123
-                status: 1
-                tracking_number: Quasi atque deserunt voluptatum facilis impedit ipsam.
-                tracking_url: Iste et inventore est.
+                - client_order_id: xxx1234
+                  items:
+                    - barcode: YCrankshaft
+                      product_name: NSS Mate 40E
+                      product_sku: YCrankshaft
+                      qty: 3
+                    - barcode: YCrankshaft
+                      product_name: NSS Mate 40E
+                      product_sku: YCrankshaft
+                      qty: 3
+                    - barcode: YCrankshaft
+                      product_name: NSS Mate 40E
+                      product_sku: YCrankshaft
+                      qty: 3
+                    - barcode: YCrankshaft
+                      product_name: NSS Mate 40E
+                      product_sku: YCrankshaft
+                      qty: 3
+                  platform_order_id: 123
+                  status: 1
+                  tracking_number: Doloremque corrupti vero possimus.
+                  tracking_url: Enim sunt.
+                - client_order_id: xxx1234
+                  items:
+                    - barcode: YCrankshaft
+                      product_name: NSS Mate 40E
+                      product_sku: YCrankshaft
+                      qty: 3
+                    - barcode: YCrankshaft
+                      product_name: NSS Mate 40E
+                      product_sku: YCrankshaft
+                      qty: 3
+                    - barcode: YCrankshaft
+                      product_name: NSS Mate 40E
+                      product_sku: YCrankshaft
+                      qty: 3
+                    - barcode: YCrankshaft
+                      product_name: NSS Mate 40E
+                      product_sku: YCrankshaft
+                      qty: 3
+                  platform_order_id: 123
+                  status: 1
+                  tracking_number: Doloremque corrupti vero possimus.
+                  tracking_url: Enim sunt.
+                - client_order_id: xxx1234
+                  items:
+                    - barcode: YCrankshaft
+                      product_name: NSS Mate 40E
+                      product_sku: YCrankshaft
+                      qty: 3
+                    - barcode: YCrankshaft
+                      product_name: NSS Mate 40E
+                      product_sku: YCrankshaft
+                      qty: 3
+                    - barcode: YCrankshaft
+                      product_name: NSS Mate 40E
+                      product_sku: YCrankshaft
+                      qty: 3
+                    - barcode: YCrankshaft
+                      product_name: NSS Mate 40E
+                      product_sku: YCrankshaft
+                      qty: 3
+                  platform_order_id: 123
+                  status: 1
+                  tracking_number: Doloremque corrupti vero possimus.
+                  tracking_url: Enim sunt.
       security:
-      - jwt_header_Authorization:
-        - api:read
-        - api:write
+        - jwt_header_Authorization:
+            - api:read
+            - api:write
     post:
       tags:
-      - order
+        - order
       summary: create_inbound_order order
       operationId: order#create_inbound_order
       requestBody:
@@ -246,19 +282,15 @@ paths:
               estimated_arrival_at: "2021-01-12 09:34:09"
               is_pickup: true
               items:
-              - barcode: YCrankshaft
-                product_name: NSS Mate 40E
-                product_sku: YCrankshaft
-                qty: 3
-              - barcode: YCrankshaft
-                product_name: NSS Mate 40E
-                product_sku: YCrankshaft
-                qty: 3
-              - barcode: YCrankshaft
-                product_name: NSS Mate 40E
-                product_sku: YCrankshaft
-                qty: 3
-              shipping_at: "2021-01-12 09:34:09"
+                - barcode: YCrankshaft
+                  product_name: NSS Mate 40E
+                  product_sku: YCrankshaft
+                  qty: 3
+                - barcode: YCrankshaft
+                  product_name: NSS Mate 40E
+                  product_sku: YCrankshaft
+                  qty: 3
+              requested_pickup_at: "2021-01-12 09:34:09"
               tracking_number: YT000001
               type: 0
               warehouse_id: 1
@@ -273,9 +305,9 @@ paths:
                 inbound_order_id: 1
                 label_url: https://example.com
       security:
-      - jwt_header_Authorization:
-        - api:read
-        - api:write
+        - jwt_header_Authorization:
+            - api:read
+            - api:write
   /outbound-orders:
     get:
       tags:
@@ -2150,8 +2182,13 @@ components:
           description: outbound order id
           example: 1
           format: int64
+        tracking_number:
+          type: string
+          description: tracking number
+          example: xxx
       example:
         outbound_order_id: 1
+        tracking_number: xxx
     Product:
       type: object
       properties:
