@@ -2209,7 +2209,7 @@ components:
           - normal
           - liquid
           - battery
-          - economic
+          - cosmetic
           - magnetic
         product_image:
           type: string
