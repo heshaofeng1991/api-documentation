@@ -1778,22 +1778,14 @@ components:
             $ref: '#/components/schemas/Item'
           description: items
           example:
-          - barcode: YCrankshaft
-            product_name: NSS Mate 40E
-            product_sku: YCrankshaft
-            qty: 3
-          - barcode: YCrankshaft
-            product_name: NSS Mate 40E
-            product_sku: YCrankshaft
-            qty: 3
-          - barcode: YCrankshaft
-            product_name: NSS Mate 40E
-            product_sku: YCrankshaft
-            qty: 3
-          - barcode: YCrankshaft
-            product_name: NSS Mate 40E
-            product_sku: YCrankshaft
-            qty: 3
+            - barcode: YCrankshaft
+              product_name: NSS Mate 40E
+              product_sku: YCrankshaft
+              qty: 3
+            - barcode: YCrankshaft
+              product_name: NSS Mate 40E
+              product_sku: YCrankshaft
+              qty: 3
         platform_order_id:
           type: integer
           description: platform order id
@@ -1801,48 +1793,48 @@ components:
           format: int64
         status:
           type: integer
-          description: order status
+          description: order status(1 准备揽件 2 运输中 3 已到库)
           example: 1
           format: int64
         tracking_number:
           type: string
           description: tracking number
-          example: Et tempore ullam maiores sed quia.
+          example: Sed dolores incidunt veritatis.
         tracking_url:
           type: string
           description: tracking url
-          example: Placeat libero totam tempora velit officia.
+          example: Dolores non aliquid perferendis laboriosam et quia.
       description: OrderRsp describes the order info
       example:
         client_order_id: xxx1234
         items:
-        - barcode: YCrankshaft
-          product_name: NSS Mate 40E
-          product_sku: YCrankshaft
-          qty: 3
-        - barcode: YCrankshaft
-          product_name: NSS Mate 40E
-          product_sku: YCrankshaft
-          qty: 3
-        - barcode: YCrankshaft
-          product_name: NSS Mate 40E
-          product_sku: YCrankshaft
-          qty: 3
-        - barcode: YCrankshaft
-          product_name: NSS Mate 40E
-          product_sku: YCrankshaft
-          qty: 3
+          - barcode: YCrankshaft
+            product_name: NSS Mate 40E
+            product_sku: YCrankshaft
+            qty: 3
+          - barcode: YCrankshaft
+            product_name: NSS Mate 40E
+            product_sku: YCrankshaft
+            qty: 3
+          - barcode: YCrankshaft
+            product_name: NSS Mate 40E
+            product_sku: YCrankshaft
+            qty: 3
+          - barcode: YCrankshaft
+            product_name: NSS Mate 40E
+            product_sku: YCrankshaft
+            qty: 3
         platform_order_id: 123
         status: 1
-        tracking_number: Magni eos labore corrupti quis neque adipisci.
-        tracking_url: Suscipit nihil.
+        tracking_number: Quam quis sit.
+        tracking_url: Doloribus dolor tenetur blanditiis nesciunt recusandae.
       required:
-      - client_order_id
-      - status
-      - platform_order_id
-      - tracking_number
-      - tracking_url
-      - items
+        - client_order_id
+        - status
+        - platform_order_id
+        - tracking_number
+        - tracking_url
+        - items
     InboundOrderRsp:
       type: object
       properties:
@@ -2544,48 +2536,46 @@ components:
             $ref: '#/components/schemas/TrackItem'
           description: tracking details
           example:
-            - content: Non voluptatibus.
-              timestamp: Architecto quam qui blanditiis eveniet.
-            - content: Non voluptatibus.
-              timestamp: Architecto quam qui blanditiis eveniet.
+            - content: shipping done
+              timestamp: "2022-01-27 00:00:00"
+            - content: shipping done
+              timestamp: "2022-01-27 00:00:00"
         order_id:
           type: integer
           description: order_id
-          example: 4056792459026050395
+          example: 101
           format: int64
         status:
           type: integer
           description: status
-          example: 2220795359355188102
+          example: 0
           format: int64
         tracking_number:
           type: string
           description: tracking number of order
-          example: Tempora velit officia nemo.
+          example: NSS193719374,NSS193719
         tracking_url:
           type: string
           description: tracking url
-          example: Magni eos labore corrupti quis neque adipisci.
+          example: http://example.com
         type:
           type: integer
           description: type
-          example: 8604551874296171566
+          example: 1
           format: int64
       example:
         details:
-          - content: Non voluptatibus.
-            timestamp: Architecto quam qui blanditiis eveniet.
-          - content: Non voluptatibus.
-            timestamp: Architecto quam qui blanditiis eveniet.
-          - content: Non voluptatibus.
-            timestamp: Architecto quam qui blanditiis eveniet.
-          - content: Non voluptatibus.
-            timestamp: Architecto quam qui blanditiis eveniet.
-        order_id: 6999935806665057591
-        status: 5568620975499276390
-        tracking_number: Asperiores sed sunt.
-        tracking_url: Velit non ut ut et.
-        type: 841884777336413652
+          - content: shipping done
+            timestamp: "2022-01-27 00:00:00"
+          - content: shipping done
+            timestamp: "2022-01-27 00:00:00"
+          - content: shipping done
+            timestamp: "2022-01-27 00:00:00"
+        order_id: 101
+        status: 0
+        tracking_number: NSS193719374,NSS193719
+        tracking_url: http://example.com
+        type: 1
       required:
         - tracking_number
         - details
@@ -2598,14 +2588,14 @@ components:
         content:
           type: string
           description: tracking description
-          example: Dolores non aliquid perferendis laboriosam et quia.
+          example: shipping done
         timestamp:
           type: string
           description: tracking timestamp
-          example: Facilis quam quis.
+          example: "2022-01-27 00:00:00"
       example:
-        content: Sit doloribus dolor tenetur blanditiis nesciunt.
-        timestamp: Qui sunt quia.
+        content: shipping done
+        timestamp: "2022-01-27 00:00:00"
     UploadImageRequestBody:
       type: object
       properties:
