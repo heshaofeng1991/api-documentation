@@ -979,20 +979,33 @@ paths:
   /track:
     get:
       tags:
-      - track
-      summary: get track info
+        - track
+      summary: get track
       operationId: track#get
       parameters:
-      - name: tracking_number
-        in: query
-        description: tracking number of order
-        allowEmptyValue: true
-        required: true
-        schema:
-          type: string
+        - name: tracking_number
+          in: query
           description: tracking number of order
-          example: Dignissimos beatae.
-        example: Eius et repudiandae.
+          allowEmptyValue: true
+          required: true
+          schema:
+            type: string
+            description: tracking number of order
+            example: Veniam ut rerum et eveniet inventore.
+          example: Numquam ut.
+        - name: type
+          in: query
+          description: type(1 tracking_number 2 order_id)
+          allowEmptyValue: true
+          required: true
+          schema:
+            type: integer
+            description: type(1 tracking_number 2 order_id)
+            example: 1
+            enum:
+              - 1
+              - 2
+          example: 1
       responses:
         "200":
           description: OK response.
@@ -1003,53 +1016,97 @@ paths:
                 items:
                   $ref: '#/components/schemas/Track'
                 example:
-                - details:
-                  - content: Quaerat at ut inventore architecto laboriosam.
-                    timestamp: Aut perferendis sed voluptates itaque.
-                  - content: Quaerat at ut inventore architecto laboriosam.
-                    timestamp: Aut perferendis sed voluptates itaque.
-                  tracking_number: Aut saepe quam.
-                  tracking_url: Adipisci optio asperiores.
-                - details:
-                  - content: Quaerat at ut inventore architecto laboriosam.
-                    timestamp: Aut perferendis sed voluptates itaque.
-                  - content: Quaerat at ut inventore architecto laboriosam.
-                    timestamp: Aut perferendis sed voluptates itaque.
-                  tracking_number: Aut saepe quam.
-                  tracking_url: Adipisci optio asperiores.
+                  - details:
+                      - content: Non voluptatibus.
+                        timestamp: Architecto quam qui blanditiis eveniet.
+                      - content: Non voluptatibus.
+                        timestamp: Architecto quam qui blanditiis eveniet.
+                      - content: Non voluptatibus.
+                        timestamp: Architecto quam qui blanditiis eveniet.
+                      - content: Non voluptatibus.
+                        timestamp: Architecto quam qui blanditiis eveniet.
+                    order_id: 2555006229656297548
+                    status: 886338532386634900
+                    tracking_number: Perferendis sed voluptates itaque vero maiores
+                      neque.
+                    tracking_url: Labore id.
+                    type: 8932039273958417452
+                  - details:
+                      - content: Non voluptatibus.
+                        timestamp: Architecto quam qui blanditiis eveniet.
+                      - content: Non voluptatibus.
+                        timestamp: Architecto quam qui blanditiis eveniet.
+                      - content: Non voluptatibus.
+                        timestamp: Architecto quam qui blanditiis eveniet.
+                      - content: Non voluptatibus.
+                        timestamp: Architecto quam qui blanditiis eveniet.
+                    order_id: 2555006229656297548
+                    status: 886338532386634900
+                    tracking_number: Perferendis sed voluptates itaque vero maiores
+                      neque.
+                    tracking_url: Labore id.
+                    type: 8932039273958417452
               example:
-              - details:
-                - content: Quaerat at ut inventore architecto laboriosam.
-                  timestamp: Aut perferendis sed voluptates itaque.
-                - content: Quaerat at ut inventore architecto laboriosam.
-                  timestamp: Aut perferendis sed voluptates itaque.
-                tracking_number: Aut saepe quam.
-                tracking_url: Adipisci optio asperiores.
-              - details:
-                - content: Quaerat at ut inventore architecto laboriosam.
-                  timestamp: Aut perferendis sed voluptates itaque.
-                - content: Quaerat at ut inventore architecto laboriosam.
-                  timestamp: Aut perferendis sed voluptates itaque.
-                tracking_number: Aut saepe quam.
-                tracking_url: Adipisci optio asperiores.
-              - details:
-                - content: Quaerat at ut inventore architecto laboriosam.
-                  timestamp: Aut perferendis sed voluptates itaque.
-                - content: Quaerat at ut inventore architecto laboriosam.
-                  timestamp: Aut perferendis sed voluptates itaque.
-                tracking_number: Aut saepe quam.
-                tracking_url: Adipisci optio asperiores.
-              - details:
-                - content: Quaerat at ut inventore architecto laboriosam.
-                  timestamp: Aut perferendis sed voluptates itaque.
-                - content: Quaerat at ut inventore architecto laboriosam.
-                  timestamp: Aut perferendis sed voluptates itaque.
-                tracking_number: Aut saepe quam.
-                tracking_url: Adipisci optio asperiores.
+                - details:
+                    - content: Non voluptatibus.
+                      timestamp: Architecto quam qui blanditiis eveniet.
+                    - content: Non voluptatibus.
+                      timestamp: Architecto quam qui blanditiis eveniet.
+                    - content: Non voluptatibus.
+                      timestamp: Architecto quam qui blanditiis eveniet.
+                    - content: Non voluptatibus.
+                      timestamp: Architecto quam qui blanditiis eveniet.
+                  order_id: 2555006229656297548
+                  status: 886338532386634900
+                  tracking_number: Perferendis sed voluptates itaque vero maiores neque.
+                  tracking_url: Labore id.
+                  type: 8932039273958417452
+                - details:
+                    - content: Non voluptatibus.
+                      timestamp: Architecto quam qui blanditiis eveniet.
+                    - content: Non voluptatibus.
+                      timestamp: Architecto quam qui blanditiis eveniet.
+                    - content: Non voluptatibus.
+                      timestamp: Architecto quam qui blanditiis eveniet.
+                    - content: Non voluptatibus.
+                      timestamp: Architecto quam qui blanditiis eveniet.
+                  order_id: 2555006229656297548
+                  status: 886338532386634900
+                  tracking_number: Perferendis sed voluptates itaque vero maiores neque.
+                  tracking_url: Labore id.
+                  type: 8932039273958417452
+                - details:
+                    - content: Non voluptatibus.
+                      timestamp: Architecto quam qui blanditiis eveniet.
+                    - content: Non voluptatibus.
+                      timestamp: Architecto quam qui blanditiis eveniet.
+                    - content: Non voluptatibus.
+                      timestamp: Architecto quam qui blanditiis eveniet.
+                    - content: Non voluptatibus.
+                      timestamp: Architecto quam qui blanditiis eveniet.
+                  order_id: 2555006229656297548
+                  status: 886338532386634900
+                  tracking_number: Perferendis sed voluptates itaque vero maiores neque.
+                  tracking_url: Labore id.
+                  type: 8932039273958417452
+                - details:
+                    - content: Non voluptatibus.
+                      timestamp: Architecto quam qui blanditiis eveniet.
+                    - content: Non voluptatibus.
+                      timestamp: Architecto quam qui blanditiis eveniet.
+                    - content: Non voluptatibus.
+                      timestamp: Architecto quam qui blanditiis eveniet.
+                    - content: Non voluptatibus.
+                      timestamp: Architecto quam qui blanditiis eveniet.
+                  order_id: 2555006229656297548
+                  status: 886338532386634900
+                  tracking_number: Perferendis sed voluptates itaque vero maiores neque.
+                  tracking_url: Labore id.
+                  type: 8932039273958417452
       security:
-      - jwt_header_Authorization:
-        - api:read
-        - api:write
+        - jwt_header_Authorization:
+            - api:read
+            - api:write
   /upload_image:
     post:
       tags:
@@ -2487,33 +2544,54 @@ components:
             $ref: '#/components/schemas/TrackItem'
           description: tracking details
           example:
-          - content: Quaerat at ut inventore architecto laboriosam.
-            timestamp: Aut perferendis sed voluptates itaque.
-          - content: Quaerat at ut inventore architecto laboriosam.
-            timestamp: Aut perferendis sed voluptates itaque.
-          - content: Quaerat at ut inventore architecto laboriosam.
-            timestamp: Aut perferendis sed voluptates itaque.
+            - content: Non voluptatibus.
+              timestamp: Architecto quam qui blanditiis eveniet.
+            - content: Non voluptatibus.
+              timestamp: Architecto quam qui blanditiis eveniet.
+        order_id:
+          type: integer
+          description: order_id
+          example: 4056792459026050395
+          format: int64
+        status:
+          type: integer
+          description: status
+          example: 2220795359355188102
+          format: int64
         tracking_number:
           type: string
           description: tracking number of order
-          example: Libero et impedit occaecati quisquam aliquid quidem.
+          example: Tempora velit officia nemo.
         tracking_url:
           type: string
           description: tracking url
-          example: Sed dolores incidunt veritatis.
+          example: Magni eos labore corrupti quis neque adipisci.
+        type:
+          type: integer
+          description: type
+          example: 8604551874296171566
+          format: int64
       example:
         details:
-        - content: Quaerat at ut inventore architecto laboriosam.
-          timestamp: Aut perferendis sed voluptates itaque.
-        - content: Quaerat at ut inventore architecto laboriosam.
-          timestamp: Aut perferendis sed voluptates itaque.
-        - content: Quaerat at ut inventore architecto laboriosam.
-          timestamp: Aut perferendis sed voluptates itaque.
-        tracking_number: Dolores saepe aut laborum distinctio error perferendis.
-        tracking_url: Nihil debitis qui omnis ab ratione non.
+          - content: Non voluptatibus.
+            timestamp: Architecto quam qui blanditiis eveniet.
+          - content: Non voluptatibus.
+            timestamp: Architecto quam qui blanditiis eveniet.
+          - content: Non voluptatibus.
+            timestamp: Architecto quam qui blanditiis eveniet.
+          - content: Non voluptatibus.
+            timestamp: Architecto quam qui blanditiis eveniet.
+        order_id: 6999935806665057591
+        status: 5568620975499276390
+        tracking_number: Asperiores sed sunt.
+        tracking_url: Velit non ut ut et.
+        type: 841884777336413652
       required:
-      - tracking_number
-      - details
+        - tracking_number
+        - details
+        - status
+        - type
+        - order_id
     TrackItem:
       type: object
       properties:
