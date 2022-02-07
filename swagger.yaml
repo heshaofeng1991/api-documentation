@@ -147,18 +147,11 @@ paths:
                         product_name: NSS Mate 40E
                         product_sku: YCrankshaft
                         qty: 3
-                      - barcode: YCrankshaft
-                        product_name: NSS Mate 40E
-                        product_sku: YCrankshaft
-                        qty: 3
-                      - barcode: YCrankshaft
-                        product_name: NSS Mate 40E
-                        product_sku: YCrankshaft
-                        qty: 3
                     platform_order_id: 123
                     status: 1
-                    tracking_number: Doloremque corrupti vero possimus.
-                    tracking_url: Enim sunt.
+                    timestamp: Dolor quasi atque deserunt voluptatum.
+                    tracking_number: Rerum nisi repellendus quis totam quasi.
+                    tracking_url: Quasi a odit consequatur quaerat et qui.
                   - client_order_id: xxx1234
                     items:
                       - barcode: YCrankshaft
@@ -169,18 +162,11 @@ paths:
                         product_name: NSS Mate 40E
                         product_sku: YCrankshaft
                         qty: 3
-                      - barcode: YCrankshaft
-                        product_name: NSS Mate 40E
-                        product_sku: YCrankshaft
-                        qty: 3
-                      - barcode: YCrankshaft
-                        product_name: NSS Mate 40E
-                        product_sku: YCrankshaft
-                        qty: 3
                     platform_order_id: 123
                     status: 1
-                    tracking_number: Doloremque corrupti vero possimus.
-                    tracking_url: Enim sunt.
+                    timestamp: Dolor quasi atque deserunt voluptatum.
+                    tracking_number: Rerum nisi repellendus quis totam quasi.
+                    tracking_url: Quasi a odit consequatur quaerat et qui.
               example:
                 - client_order_id: xxx1234
                   items:
@@ -192,18 +178,11 @@ paths:
                       product_name: NSS Mate 40E
                       product_sku: YCrankshaft
                       qty: 3
-                    - barcode: YCrankshaft
-                      product_name: NSS Mate 40E
-                      product_sku: YCrankshaft
-                      qty: 3
-                    - barcode: YCrankshaft
-                      product_name: NSS Mate 40E
-                      product_sku: YCrankshaft
-                      qty: 3
                   platform_order_id: 123
                   status: 1
-                  tracking_number: Doloremque corrupti vero possimus.
-                  tracking_url: Enim sunt.
+                  timestamp: Dolor quasi atque deserunt voluptatum.
+                  tracking_number: Rerum nisi repellendus quis totam quasi.
+                  tracking_url: Quasi a odit consequatur quaerat et qui.
                 - client_order_id: xxx1234
                   items:
                     - barcode: YCrankshaft
@@ -214,18 +193,11 @@ paths:
                       product_name: NSS Mate 40E
                       product_sku: YCrankshaft
                       qty: 3
-                    - barcode: YCrankshaft
-                      product_name: NSS Mate 40E
-                      product_sku: YCrankshaft
-                      qty: 3
-                    - barcode: YCrankshaft
-                      product_name: NSS Mate 40E
-                      product_sku: YCrankshaft
-                      qty: 3
                   platform_order_id: 123
                   status: 1
-                  tracking_number: Doloremque corrupti vero possimus.
-                  tracking_url: Enim sunt.
+                  timestamp: Dolor quasi atque deserunt voluptatum.
+                  tracking_number: Rerum nisi repellendus quis totam quasi.
+                  tracking_url: Quasi a odit consequatur quaerat et qui.
                 - client_order_id: xxx1234
                   items:
                     - barcode: YCrankshaft
@@ -236,18 +208,11 @@ paths:
                       product_name: NSS Mate 40E
                       product_sku: YCrankshaft
                       qty: 3
-                    - barcode: YCrankshaft
-                      product_name: NSS Mate 40E
-                      product_sku: YCrankshaft
-                      qty: 3
-                    - barcode: YCrankshaft
-                      product_name: NSS Mate 40E
-                      product_sku: YCrankshaft
-                      qty: 3
                   platform_order_id: 123
                   status: 1
-                  tracking_number: Doloremque corrupti vero possimus.
-                  tracking_url: Enim sunt.
+                  timestamp: Dolor quasi atque deserunt voluptatum.
+                  tracking_number: Rerum nisi repellendus quis totam quasi.
+                  tracking_url: Quasi a odit consequatur quaerat et qui.
       security:
         - jwt_header_Authorization:
             - api:read
