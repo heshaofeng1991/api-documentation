@@ -1786,6 +1786,10 @@ components:
               product_name: NSS Mate 40E
               product_sku: YCrankshaft
               qty: 3
+            - barcode: YCrankshaft
+              product_name: NSS Mate 40E
+              product_sku: YCrankshaft
+              qty: 3
         platform_order_id:
           type: integer
           description: platform order id
@@ -1796,14 +1800,18 @@ components:
           description: order status(1 准备揽件 2 运输中 3 已到库)
           example: 1
           format: int64
+        timestamp:
+          type: string
+          description: timestamp
+          example: Distinctio error perferendis voluptatem.
         tracking_number:
           type: string
           description: tracking number
-          example: Sed dolores incidunt veritatis.
+          example: Blanditiis nesciunt recusandae qui sunt.
         tracking_url:
           type: string
           description: tracking url
-          example: Dolores non aliquid perferendis laboriosam et quia.
+          example: Modi sapiente dolores saepe.
       description: OrderRsp describes the order info
       example:
         client_order_id: xxx1234
@@ -1816,18 +1824,11 @@ components:
             product_name: NSS Mate 40E
             product_sku: YCrankshaft
             qty: 3
-          - barcode: YCrankshaft
-            product_name: NSS Mate 40E
-            product_sku: YCrankshaft
-            qty: 3
-          - barcode: YCrankshaft
-            product_name: NSS Mate 40E
-            product_sku: YCrankshaft
-            qty: 3
         platform_order_id: 123
         status: 1
-        tracking_number: Quam quis sit.
-        tracking_url: Doloribus dolor tenetur blanditiis nesciunt recusandae.
+        timestamp: Placeat illum.
+        tracking_number: Debitis qui.
+        tracking_url: Ab ratione non non et.
       required:
         - client_order_id
         - status
@@ -1835,6 +1836,7 @@ components:
         - tracking_number
         - tracking_url
         - items
+        - timestamp
     InboundOrderRsp:
       type: object
       properties:
