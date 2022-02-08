@@ -149,9 +149,9 @@ paths:
                         qty: 3
                     platform_order_id: 123
                     status: 1
-                    timestamp: Dolor quasi atque deserunt voluptatum.
-                    tracking_number: Rerum nisi repellendus quis totam quasi.
-                    tracking_url: Quasi a odit consequatur quaerat et qui.
+                    timestamp: "2022-01-21 02:26:54"
+                    tracking_number: Quis totam.
+                    tracking_url: Possimus quasi a odit consequatur quaerat et.
                   - client_order_id: xxx1234
                     items:
                       - barcode: YCrankshaft
@@ -164,9 +164,24 @@ paths:
                         qty: 3
                     platform_order_id: 123
                     status: 1
-                    timestamp: Dolor quasi atque deserunt voluptatum.
-                    tracking_number: Rerum nisi repellendus quis totam quasi.
-                    tracking_url: Quasi a odit consequatur quaerat et qui.
+                    timestamp: "2022-01-21 02:26:54"
+                    tracking_number: Quis totam.
+                    tracking_url: Possimus quasi a odit consequatur quaerat et.
+                  - client_order_id: xxx1234
+                    items:
+                      - barcode: YCrankshaft
+                        product_name: NSS Mate 40E
+                        product_sku: YCrankshaft
+                        qty: 3
+                      - barcode: YCrankshaft
+                        product_name: NSS Mate 40E
+                        product_sku: YCrankshaft
+                        qty: 3
+                    platform_order_id: 123
+                    status: 1
+                    timestamp: "2022-01-21 02:26:54"
+                    tracking_number: Quis totam.
+                    tracking_url: Possimus quasi a odit consequatur quaerat et.
               example:
                 - client_order_id: xxx1234
                   items:
@@ -180,9 +195,9 @@ paths:
                       qty: 3
                   platform_order_id: 123
                   status: 1
-                  timestamp: Dolor quasi atque deserunt voluptatum.
-                  tracking_number: Rerum nisi repellendus quis totam quasi.
-                  tracking_url: Quasi a odit consequatur quaerat et qui.
+                  timestamp: "2022-01-21 02:26:54"
+                  tracking_number: Quis totam.
+                  tracking_url: Possimus quasi a odit consequatur quaerat et.
                 - client_order_id: xxx1234
                   items:
                     - barcode: YCrankshaft
@@ -195,9 +210,9 @@ paths:
                       qty: 3
                   platform_order_id: 123
                   status: 1
-                  timestamp: Dolor quasi atque deserunt voluptatum.
-                  tracking_number: Rerum nisi repellendus quis totam quasi.
-                  tracking_url: Quasi a odit consequatur quaerat et qui.
+                  timestamp: "2022-01-21 02:26:54"
+                  tracking_number: Quis totam.
+                  tracking_url: Possimus quasi a odit consequatur quaerat et.
                 - client_order_id: xxx1234
                   items:
                     - barcode: YCrankshaft
@@ -210,9 +225,9 @@ paths:
                       qty: 3
                   platform_order_id: 123
                   status: 1
-                  timestamp: Dolor quasi atque deserunt voluptatum.
-                  tracking_number: Rerum nisi repellendus quis totam quasi.
-                  tracking_url: Quasi a odit consequatur quaerat et qui.
+                  timestamp: "2022-01-21 02:26:54"
+                  tracking_number: Quis totam.
+                  tracking_url: Possimus quasi a odit consequatur quaerat et.
       security:
         - jwt_header_Authorization:
             - api:read
@@ -247,6 +262,14 @@ paths:
               estimated_arrival_at: "2021-01-12 09:34:09"
               is_pickup: true
               items:
+                - barcode: YCrankshaft
+                  product_name: NSS Mate 40E
+                  product_sku: YCrankshaft
+                  qty: 3
+                - barcode: YCrankshaft
+                  product_name: NSS Mate 40E
+                  product_sku: YCrankshaft
+                  qty: 3
                 - barcode: YCrankshaft
                   product_name: NSS Mate 40E
                   product_sku: YCrankshaft
@@ -1768,15 +1791,15 @@ components:
         timestamp:
           type: string
           description: timestamp
-          example: Distinctio error perferendis voluptatem.
+          example: "2022-01-21 02:26:54"
         tracking_number:
           type: string
           description: tracking number
-          example: Blanditiis nesciunt recusandae qui sunt.
+          example: Sapiente dolores saepe.
         tracking_url:
           type: string
           description: tracking url
-          example: Modi sapiente dolores saepe.
+          example: Laborum distinctio.
       description: OrderRsp describes the order info
       example:
         client_order_id: xxx1234
@@ -1789,11 +1812,19 @@ components:
             product_name: NSS Mate 40E
             product_sku: YCrankshaft
             qty: 3
+          - barcode: YCrankshaft
+            product_name: NSS Mate 40E
+            product_sku: YCrankshaft
+            qty: 3
+          - barcode: YCrankshaft
+            product_name: NSS Mate 40E
+            product_sku: YCrankshaft
+            qty: 3
         platform_order_id: 123
         status: 1
-        timestamp: Placeat illum.
-        tracking_number: Debitis qui.
-        tracking_url: Ab ratione non non et.
+        timestamp: "2022-01-21 02:26:54"
+        tracking_number: Voluptatem nihil.
+        tracking_url: Qui omnis ab ratione.
       required:
         - client_order_id
         - status
