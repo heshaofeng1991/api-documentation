@@ -785,6 +785,7 @@ paths:
                   declared_cn_name: xxx
                   declared_en_name: xxx
                   declared_value_in_usd: 50
+                  enabled_nss_barcode: false
                   height: 2
                   hs_code: xxx
                   length: 1
@@ -798,10 +799,10 @@ paths:
                   product_image: url
                   product_name: xxx
                   qty: 1
+                  tag_service: false
                   tags:
                     - withDate
                     - withMadeInChina
-                  type: 1
                   weight: 10
                   width: 1
                   with_barcode: false
@@ -809,6 +810,7 @@ paths:
                   declared_cn_name: xxx
                   declared_en_name: xxx
                   declared_value_in_usd: 50
+                  enabled_nss_barcode: false
                   height: 2
                   hs_code: xxx
                   length: 1
@@ -822,10 +824,10 @@ paths:
                   product_image: url
                   product_name: xxx
                   qty: 1
+                  tag_service: false
                   tags:
                     - withDate
                     - withMadeInChina
-                  type: 1
                   weight: 10
                   width: 1
                   with_barcode: false
@@ -838,30 +840,30 @@ paths:
                 $ref: '#/components/schemas/MultiProductRsp'
               example:
                 results:
-                  - barcode: Non laborum occaecati consequatur.
-                    error_msg: Quis natus deserunt quidem in sint.
-                    product_id: 978595068450863438
-                    product_name: Saepe consectetur ad.
-                    sku: Perspiciatis et.
-                    status: Inventore minus enim iure.
-                  - barcode: Non laborum occaecati consequatur.
-                    error_msg: Quis natus deserunt quidem in sint.
-                    product_id: 978595068450863438
-                    product_name: Saepe consectetur ad.
-                    sku: Perspiciatis et.
-                    status: Inventore minus enim iure.
-                  - barcode: Non laborum occaecati consequatur.
-                    error_msg: Quis natus deserunt quidem in sint.
-                    product_id: 978595068450863438
-                    product_name: Saepe consectetur ad.
-                    sku: Perspiciatis et.
-                    status: Inventore minus enim iure.
-                  - barcode: Non laborum occaecati consequatur.
-                    error_msg: Quis natus deserunt quidem in sint.
-                    product_id: 978595068450863438
-                    product_name: Saepe consectetur ad.
-                    sku: Perspiciatis et.
-                    status: Inventore minus enim iure.
+                  - barcode: Sunt dolores sit qui.
+                    error_msg: Vero possimus adipisci.
+                    product_id: 4210806872066124914
+                    product_name: Enim iure sit quis.
+                    sku: Explicabo accusamus impedit inventore.
+                    status: Quam doloremque.
+                  - barcode: Sunt dolores sit qui.
+                    error_msg: Vero possimus adipisci.
+                    product_id: 4210806872066124914
+                    product_name: Enim iure sit quis.
+                    sku: Explicabo accusamus impedit inventore.
+                    status: Quam doloremque.
+                  - barcode: Sunt dolores sit qui.
+                    error_msg: Vero possimus adipisci.
+                    product_id: 4210806872066124914
+                    product_name: Enim iure sit quis.
+                    sku: Explicabo accusamus impedit inventore.
+                    status: Quam doloremque.
+                  - barcode: Sunt dolores sit qui.
+                    error_msg: Vero possimus adipisci.
+                    product_id: 4210806872066124914
+                    product_name: Enim iure sit quis.
+                    sku: Explicabo accusamus impedit inventore.
+                    status: Quam doloremque.
         "401":
           description: Unauthorized response.
           content:
@@ -1273,6 +1275,7 @@ components:
               declared_cn_name: xxx
               declared_en_name: xxx
               declared_value_in_usd: 50
+              enabled_nss_barcode: false
               height: 2
               hs_code: xxx
               length: 1
@@ -1286,6 +1289,7 @@ components:
               product_image: url
               product_name: xxx
               qty: 1
+              tag_service: false
               tags:
                 - withDate
                 - withMadeInChina
@@ -1296,6 +1300,7 @@ components:
               declared_cn_name: xxx
               declared_en_name: xxx
               declared_value_in_usd: 50
+              enabled_nss_barcode: false
               height: 2
               hs_code: xxx
               length: 1
@@ -1309,6 +1314,32 @@ components:
               product_image: url
               product_name: xxx
               qty: 1
+              tag_service: false
+              tags:
+                - withDate
+                - withMadeInChina
+              weight: 10
+              width: 1
+              with_barcode: false
+            - barcode: xxx
+              declared_cn_name: xxx
+              declared_en_name: xxx
+              declared_value_in_usd: 50
+              enabled_nss_barcode: false
+              height: 2
+              hs_code: xxx
+              length: 1
+              nss_sku: xxx
+              product_attributes:
+                - normal
+                - liquid
+                - battery
+                - cosmetic
+                - magnetic
+              product_image: url
+              product_name: xxx
+              qty: 1
+              tag_service: false
               tags:
                 - withDate
                 - withMadeInChina
@@ -1321,6 +1352,7 @@ components:
             declared_cn_name: xxx
             declared_en_name: xxx
             declared_value_in_usd: 50
+            enabled_nss_barcode: false
             height: 2
             hs_code: xxx
             length: 1
@@ -1334,6 +1366,7 @@ components:
             product_image: url
             product_name: xxx
             qty: 1
+            tag_service: false
             tags:
               - withDate
               - withMadeInChina
@@ -1344,6 +1377,7 @@ components:
             declared_cn_name: xxx
             declared_en_name: xxx
             declared_value_in_usd: 50
+            enabled_nss_barcode: false
             height: 2
             hs_code: xxx
             length: 1
@@ -1357,6 +1391,7 @@ components:
             product_image: url
             product_name: xxx
             qty: 1
+            tag_service: false
             tags:
               - withDate
               - withMadeInChina
@@ -1968,36 +2003,36 @@ components:
         barcode:
           type: string
           description: barcode
-          example: Enim quasi ut dignissimos beatae expedita eius.
+          example: Facere quis.
         error_msg:
           type: string
           description: error msg
-          example: Quis quam quia eos sed enim.
+          example: Molestias veniam molestias iusto.
         product_id:
           type: integer
           description: product id
-          example: 7479173688516675191
+          example: 3610602431706795084
           format: int64
         product_name:
           type: string
           description: product_name
-          example: Consectetur repellat occaecati delectus rem quidem rerum.
+          example: Dignissimos beatae.
         sku:
           type: string
           description: sku
-          example: Repudiandae iusto.
+          example: Quia eos sed enim consectetur enim quasi.
         status:
           type: string
           description: status
-          example: Iusto incidunt.
+          example: Illum expedita temporibus aut qui.
       description: MultiProductRsp describes the multi product info
       example:
-        barcode: Expedita enim assumenda.
-        error_msg: Placeat excepturi sit.
-        product_id: 1885574407000866423
-        product_name: Quis sed.
-        sku: Possimus voluptatem est quibusdam.
-        status: Vero iste pariatur qui.
+        barcode: Provident in.
+        error_msg: Occaecati delectus rem quidem.
+        product_id: 1648762642491187440
+        product_name: Veniam placeat excepturi sit recusandae expedita.
+        sku: Iste pariatur.
+        status: Et repudiandae iusto sed consectetur.
       required:
         - product_id
         - status
