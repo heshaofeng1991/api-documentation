@@ -740,7 +740,7 @@ paths:
                 state_code: S
                 state_name: U
                 zip_code: "10016"
-              shipping_type: Fastest
+              shipping_type: 1
               total_price: 980.67
               type: 1
       responses:
@@ -1603,13 +1603,13 @@ components:
         receiver_info:
           $ref: '#/components/schemas/ShippingAddress'
         shipping_type:
-          type: string
-          description: shipping type
-          example: Fastest
+          type: integer
+          description: shipping type(1 Economic, 2 Fastest, 3 Recommended)
+          example: 1
           enum:
-            - Economic
-            - Fastest
-            - Recommended
+            - 1
+            - 2
+            - 3
         total_price:
           type: number
           description: total price
@@ -1699,7 +1699,7 @@ components:
           state_code: S
           state_name: U
           zip_code: "10016"
-        shipping_type: Fastest
+        shipping_type: 1
         total_price: 980.67
         type: 1
       required:
