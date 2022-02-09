@@ -803,6 +803,7 @@ paths:
                     - withDate
                     - withMadeInChina
                   token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ
+                  type: 1
                   weight: 10
                   width: 1
                   with_barcode: false
@@ -828,6 +829,7 @@ paths:
                     - withDate
                     - withMadeInChina
                   token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ
+                  type: 1
                   weight: 10
                   width: 1
                   with_barcode: false
@@ -2428,6 +2430,13 @@ components:
           type: string
           description: JWT used for authentication
           example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ
+        type:
+          type: integer
+          description: type(1 direct 2 warehouse)
+          example: 1
+          enum:
+            - 1
+            - 2
         weight:
           type: number
           description: product weight（g）
@@ -2469,6 +2478,7 @@ components:
           - withDate
           - withMadeInChina
         token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ
+        type: 1
         weight: 10
         width: 1
         with_barcode: false
@@ -2488,6 +2498,7 @@ components:
         - barcode
         - tags
         - product_attributes
+        - type
     Quote:
       type: object
       properties:
