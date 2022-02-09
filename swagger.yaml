@@ -781,8 +781,7 @@ paths:
               $ref: '#/components/schemas/BatchesCreateProductRequestBody'
             example:
               products:
-                - Authorization: Possimus adipisci enim sunt dolores.
-                  barcode: xxx
+                - barcode: xxx
                   declared_cn_name: xxx
                   declared_en_name: xxx
                   declared_value_in_usd: 50
@@ -802,13 +801,11 @@ paths:
                   tags:
                     - withDate
                     - withMadeInChina
-                  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ
                   type: 1
                   weight: 10
                   width: 1
                   with_barcode: false
-                - Authorization: Possimus adipisci enim sunt dolores.
-                  barcode: xxx
+                - barcode: xxx
                   declared_cn_name: xxx
                   declared_en_name: xxx
                   declared_value_in_usd: 50
@@ -828,7 +825,6 @@ paths:
                   tags:
                     - withDate
                     - withMadeInChina
-                  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ
                   type: 1
                   weight: 10
                   width: 1
@@ -1273,8 +1269,7 @@ components:
             $ref: '#/components/schemas/Product'
           description: product info
           example:
-            - Authorization: Possimus adipisci enim sunt dolores.
-              barcode: xxx
+            - barcode: xxx
               declared_cn_name: xxx
               declared_en_name: xxx
               declared_value_in_usd: 50
@@ -1294,12 +1289,10 @@ components:
               tags:
                 - withDate
                 - withMadeInChina
-              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ
               weight: 10
               width: 1
               with_barcode: false
-            - Authorization: Possimus adipisci enim sunt dolores.
-              barcode: xxx
+            - barcode: xxx
               declared_cn_name: xxx
               declared_en_name: xxx
               declared_value_in_usd: 50
@@ -1319,14 +1312,12 @@ components:
               tags:
                 - withDate
                 - withMadeInChina
-              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ
               weight: 10
               width: 1
               with_barcode: false
       example:
         products:
-          - Authorization: Possimus adipisci enim sunt dolores.
-            barcode: xxx
+          - barcode: xxx
             declared_cn_name: xxx
             declared_en_name: xxx
             declared_value_in_usd: 50
@@ -1346,12 +1337,10 @@ components:
             tags:
               - withDate
               - withMadeInChina
-            token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ
             weight: 10
             width: 1
             with_barcode: false
-          - Authorization: Possimus adipisci enim sunt dolores.
-            barcode: xxx
+          - barcode: xxx
             declared_cn_name: xxx
             declared_en_name: xxx
             declared_value_in_usd: 50
@@ -1371,7 +1360,6 @@ components:
             tags:
               - withDate
               - withMadeInChina
-            token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ
             weight: 10
             width: 1
             with_barcode: false
@@ -2346,10 +2334,6 @@ components:
     Product:
       type: object
       properties:
-        Authorization:
-          type: string
-          description: Authorization
-          example: Ad ex quis aut fugit.
         barcode:
           type: string
           description: barcode
@@ -2426,10 +2410,6 @@ components:
           example:
             - withDate
             - withMadeInChina
-        token:
-          type: string
-          description: JWT used for authentication
-          example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ
         type:
           type: integer
           description: type(1 direct 2 warehouse)
@@ -2456,7 +2436,6 @@ components:
             - true
       description: Product describes the create product
       example:
-        Authorization: Illum expedita temporibus aut qui.
         barcode: xxx
         declared_cn_name: xxx
         declared_en_name: xxx
@@ -2477,7 +2456,6 @@ components:
         tags:
           - withDate
           - withMadeInChina
-        token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ
         type: 1
         weight: 10
         width: 1
