@@ -1010,9 +1010,9 @@ paths:
           schema:
             type: string
             description: date
-            example: 2022-02-10
+            example: 2022-02-11
             maxLength: 30
-          example: 2022-02-10
+          example: 2022-02-11
       responses:
         "200":
           description: OK response.
