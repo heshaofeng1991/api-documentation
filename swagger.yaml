@@ -645,9 +645,9 @@ paths:
           schema:
             type: string
             description: date
-            example: xxx
+            example: "2022-02-14"
             maxLength: 30
-          example: xxx
+          example: "2022-02-14"
       responses:
         "200":
           description: OK response.
