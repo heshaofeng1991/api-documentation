@@ -671,6 +671,7 @@ paths:
             example:
               products:
                 - barcode: xxx
+                  customer_code: xxx
                   declared_cn_name: xxx
                   declared_en_name: xxx
                   declared_value_in_eur: 50
@@ -697,6 +698,7 @@ paths:
                   width: 1
                   with_barcode: false
                 - barcode: xxx
+                  customer_code: xxx
                   declared_cn_name: xxx
                   declared_en_name: xxx
                   declared_value_in_eur: 50
@@ -723,6 +725,7 @@ paths:
                   width: 1
                   with_barcode: false
                 - barcode: xxx
+                  customer_code: xxx
                   declared_cn_name: xxx
                   declared_en_name: xxx
                   declared_value_in_eur: 50
@@ -1241,6 +1244,7 @@ components:
           description: product info
           example:
             - barcode: xxx
+              customer_code: xxx
               declared_cn_name: xxx
               declared_en_name: xxx
               declared_value_in_eur: 50
@@ -1267,6 +1271,7 @@ components:
               width: 1
               with_barcode: false
             - barcode: xxx
+              customer_code: xxx
               declared_cn_name: xxx
               declared_en_name: xxx
               declared_value_in_eur: 50
@@ -1293,6 +1298,7 @@ components:
               width: 1
               with_barcode: false
             - barcode: xxx
+              customer_code: xxx
               declared_cn_name: xxx
               declared_en_name: xxx
               declared_value_in_eur: 50
@@ -1321,6 +1327,7 @@ components:
       example:
         products:
           - barcode: xxx
+            customer_code: xxx
             declared_cn_name: xxx
             declared_en_name: xxx
             declared_value_in_eur: 50
@@ -1347,6 +1354,7 @@ components:
             width: 1
             with_barcode: false
           - barcode: xxx
+            customer_code: xxx
             declared_cn_name: xxx
             declared_en_name: xxx
             declared_value_in_eur: 50
@@ -1511,6 +1519,8 @@ components:
           type: string
           description: customer code
           example: YT
+          minLength: 1
+          maxLength: 50
         customer_order_id:
           type: string
           description: customer order id
@@ -2354,6 +2364,11 @@ components:
           description: barcode
           example: xxx
           maxLength: 50
+        customer_code:
+          type: string
+          description: customer code
+          example: xxx
+          maxLength: 50
         declared_cn_name:
           type: string
           description: declared cn name
@@ -2464,6 +2479,7 @@ components:
       description: Product describes the create product
       example:
         barcode: xxx
+        customer_code: xxx
         declared_cn_name: xxx
         declared_en_name: xxx
         declared_value_in_eur: 50
@@ -2507,6 +2523,7 @@ components:
         - product_attributes
         - tag_service
         - enabled_nss_barcode
+        - customer_code
     Quote:
       type: object
       properties:
