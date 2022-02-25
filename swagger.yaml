@@ -35,15 +35,6 @@ paths:
                 id: 3F1FKVRR
                 message: Value of ID must be an integer
                 name: bad_request
-  /health-check:
-    get:
-      tags:
-        - healthy
-      summary: get healthy
-      operationId: healthy#get
-      responses:
-        "200":
-          description: OK response.
   /inbound-orders:
     get:
       tags:
@@ -353,16 +344,6 @@ paths:
                 id: 3F1FKVRR
                 message: Value of ID must be an integer
                 name: bad_request
-  /openapi.json:
-    get:
-      tags:
-        - swagger
-      summary: Download gen/http/openapi.json
-      description: JSON document containing the API definition.
-      operationId: swagger#/openapi.json
-      responses:
-        "200":
-          description: File downloaded
   /outbound-orders:
     get:
       tags:
@@ -813,62 +794,6 @@ paths:
                 id: 3F1FKVRR
                 message: Value of ID must be an integer
                 name: bad_request
-  /pickup-orders:
-    post:
-      tags:
-        - order
-      summary: create_pickup_order order
-      operationId: order#create_pickup_order
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/CreatePickupOrderRequestBody'
-            example:
-              address:
-                address1: address1
-                address2: address2
-                city_name: SZ
-                country_code: US
-                country_name: US
-                first_name: He
-                last_name: John
-                phone_number: 150xxxxxxxx
-                state_code: S
-                state_name: U
-                zip_code: "10016"
-              customer_code: "1013"
-              items:
-                - barcode: YCrankshaft
-                  product_name: NSS Mate 40E
-                  product_sku: YCrankshaft
-                  qty: 3
-                - barcode: YCrankshaft
-                  product_name: NSS Mate 40E
-                  product_sku: YCrankshaft
-                  qty: 3
-              requested_pickup_at: "2021-01-12 09:34:09"
-              type: 1
-      responses:
-        "200":
-          description: OK response.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/PickupOrderRsp'
-              example:
-                error_msg: xxx
-        "401":
-          description: Unauthorized response.
-          content:
-            application/vnd.goa.error:
-              schema:
-                $ref: '#/components/schemas/Error'
-              example:
-                id: 3F1FKVRR
-                message: Value of ID must be an integer
-                name: bad_request
   /products:
     post:
       tags:
@@ -1261,40 +1186,6 @@ paths:
                   total_cost: 45.89
                   type: 1
                   weight: 1000
-        "401":
-          description: Unauthorized response.
-          content:
-            application/vnd.goa.error:
-              schema:
-                $ref: '#/components/schemas/Error'
-              example:
-                id: 3F1FKVRR
-                message: Value of ID must be an integer
-                name: bad_request
-  /token:
-    post:
-      tags:
-        - barcode
-      summary: generate_token barcode
-      operationId: barcode#generate_token
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/GenerateTokenRequestBody'
-            example:
-              id: 1
-              tenant_id: 1
-      responses:
-        "200":
-          description: OK response.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/GenerateTokenRsp'
-              example:
-                token: Molestiae et necessitatibus.
         "401":
           description: Unauthorized response.
           content:
@@ -1948,78 +1839,6 @@ components:
         - description
         - inbound_order_id
         - type
-    CreatePickupOrderRequestBody:
-      type: object
-      properties:
-        address:
-          $ref: '#/components/schemas/ShippingAddress'
-        customer_code:
-          type: string
-          description: customer code
-          example: "1013"
-          maxLength: 50
-        items:
-          type: array
-          items:
-            $ref: '#/components/schemas/Item'
-          description: inbound order items
-          example:
-            - barcode: YCrankshaft
-              product_name: NSS Mate 40E
-              product_sku: YCrankshaft
-              qty: 3
-            - barcode: YCrankshaft
-              product_name: NSS Mate 40E
-              product_sku: YCrankshaft
-              qty: 3
-          minItems: 1
-        requested_pickup_at:
-          type: string
-          description: shipping at
-          example: "2021-01-12 09:34:09"
-          maxLength: 30
-        type:
-          type: integer
-          description: delivery mode(1 direct，2 warehouse)
-          example: 1
-          enum:
-            - 1
-            - 2
-      example:
-        address:
-          address1: address1
-          address2: address2
-          city_name: SZ
-          country_code: US
-          country_name: US
-          first_name: He
-          last_name: John
-          phone_number: 150xxxxxxxx
-          state_code: S
-          state_name: U
-          zip_code: "10016"
-        customer_code: "1013"
-        items:
-          - barcode: YCrankshaft
-            product_name: NSS Mate 40E
-            product_sku: YCrankshaft
-            qty: 3
-          - barcode: YCrankshaft
-            product_name: NSS Mate 40E
-            product_sku: YCrankshaft
-            qty: 3
-          - barcode: YCrankshaft
-            product_name: NSS Mate 40E
-            product_sku: YCrankshaft
-            qty: 3
-        requested_pickup_at: "2021-01-12 09:34:09"
-        type: 1
-      required:
-        - requested_pickup_at
-        - items
-        - address
-        - type
-        - customer_code
     Error:
       type: object
       properties:
@@ -2613,17 +2432,6 @@ components:
       example:
         outbound_order_id: 1
         tracking_number: xxx
-    PickupOrderRsp:
-      type: object
-      properties:
-        error_msg:
-          type: string
-          description: error message
-          example: xxx
-      example:
-        error_msg: xxx
-      required:
-        - error_msg
     Product:
       type: object
       properties:
@@ -3041,15 +2849,11 @@ tags:
     description: The barcode service performs operations on barcode
   - name: file
     description: The file service performs operations on file
-  - name: healthy
-    description: The healthy check service
   - name: order
     description: The order service performs operations on order
   - name: product
     description: The product service performs operations on product
   - name: quote
     description: The quote service performs operations on quotation
-  - name: swagger
-    description: The swagger service servers the API definition.
   - name: track
     description: The track service performs operations on track order status
