@@ -4,7 +4,7 @@ info:
   description: NextSmartShip openapi for oms and wms
   version: "1.0"
 servers:
-  - url: https://openapi.dev.nextsmartship.com
+  - url: https://openapi.uat.nextsmartship.com
     description: Order Management Service
     variables:
       version:
@@ -13,9 +13,9 @@ paths:
   /barcode:
     post:
       tags:
-        - barcode
-      summary: generate_barcode barcode
-      operationId: barcode#generate_barcode
+        - product
+      summary: generate_barcode product
+      operationId: product#generate_barcode
       responses:
         "200":
           description: OK response.
@@ -24,7 +24,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/BarCodeRsp'
               example:
-                barcode: Voluptatibus eos voluptatem molestias.
+                barcode: Itaque vero maiores.
         "401":
           description: Unauthorized response.
           content:
@@ -77,11 +77,15 @@ paths:
                         product_name: NSS Mate 40E
                         product_sku: YCrankshaft
                         qty: 3
+                      - barcode: YCrankshaft
+                        product_name: NSS Mate 40E
+                        product_sku: YCrankshaft
+                        qty: 3
                     platform_order_id: 123
                     status: 1
                     timestamp: "2022-01-21 02:26:54"
-                    tracking_number: Consequatur itaque aut nam optio magnam.
-                    tracking_url: Beatae illum modi.
+                    tracking_number: Vel veritatis.
+                    tracking_url: Consequatur itaque aut nam optio magnam.
                   - client_order_id: xxx1234
                     items:
                       - barcode: YCrankshaft
@@ -96,11 +100,15 @@ paths:
                         product_name: NSS Mate 40E
                         product_sku: YCrankshaft
                         qty: 3
+                      - barcode: YCrankshaft
+                        product_name: NSS Mate 40E
+                        product_sku: YCrankshaft
+                        qty: 3
                     platform_order_id: 123
                     status: 1
                     timestamp: "2022-01-21 02:26:54"
-                    tracking_number: Consequatur itaque aut nam optio magnam.
-                    tracking_url: Beatae illum modi.
+                    tracking_number: Vel veritatis.
+                    tracking_url: Consequatur itaque aut nam optio magnam.
                   - client_order_id: xxx1234
                     items:
                       - barcode: YCrankshaft
@@ -115,11 +123,15 @@ paths:
                         product_name: NSS Mate 40E
                         product_sku: YCrankshaft
                         qty: 3
+                      - barcode: YCrankshaft
+                        product_name: NSS Mate 40E
+                        product_sku: YCrankshaft
+                        qty: 3
                     platform_order_id: 123
                     status: 1
                     timestamp: "2022-01-21 02:26:54"
-                    tracking_number: Consequatur itaque aut nam optio magnam.
-                    tracking_url: Beatae illum modi.
+                    tracking_number: Vel veritatis.
+                    tracking_url: Consequatur itaque aut nam optio magnam.
                   - client_order_id: xxx1234
                     items:
                       - barcode: YCrankshaft
@@ -134,11 +146,15 @@ paths:
                         product_name: NSS Mate 40E
                         product_sku: YCrankshaft
                         qty: 3
+                      - barcode: YCrankshaft
+                        product_name: NSS Mate 40E
+                        product_sku: YCrankshaft
+                        qty: 3
                     platform_order_id: 123
                     status: 1
                     timestamp: "2022-01-21 02:26:54"
-                    tracking_number: Consequatur itaque aut nam optio magnam.
-                    tracking_url: Beatae illum modi.
+                    tracking_number: Vel veritatis.
+                    tracking_url: Consequatur itaque aut nam optio magnam.
               example:
                 - client_order_id: xxx1234
                   items:
@@ -154,11 +170,15 @@ paths:
                       product_name: NSS Mate 40E
                       product_sku: YCrankshaft
                       qty: 3
+                    - barcode: YCrankshaft
+                      product_name: NSS Mate 40E
+                      product_sku: YCrankshaft
+                      qty: 3
                   platform_order_id: 123
                   status: 1
                   timestamp: "2022-01-21 02:26:54"
-                  tracking_number: Consequatur itaque aut nam optio magnam.
-                  tracking_url: Beatae illum modi.
+                  tracking_number: Vel veritatis.
+                  tracking_url: Consequatur itaque aut nam optio magnam.
                 - client_order_id: xxx1234
                   items:
                     - barcode: YCrankshaft
@@ -173,11 +193,15 @@ paths:
                       product_name: NSS Mate 40E
                       product_sku: YCrankshaft
                       qty: 3
+                    - barcode: YCrankshaft
+                      product_name: NSS Mate 40E
+                      product_sku: YCrankshaft
+                      qty: 3
                   platform_order_id: 123
                   status: 1
                   timestamp: "2022-01-21 02:26:54"
-                  tracking_number: Consequatur itaque aut nam optio magnam.
-                  tracking_url: Beatae illum modi.
+                  tracking_number: Vel veritatis.
+                  tracking_url: Consequatur itaque aut nam optio magnam.
                 - client_order_id: xxx1234
                   items:
                     - barcode: YCrankshaft
@@ -192,11 +216,15 @@ paths:
                       product_name: NSS Mate 40E
                       product_sku: YCrankshaft
                       qty: 3
+                    - barcode: YCrankshaft
+                      product_name: NSS Mate 40E
+                      product_sku: YCrankshaft
+                      qty: 3
                   platform_order_id: 123
                   status: 1
                   timestamp: "2022-01-21 02:26:54"
-                  tracking_number: Consequatur itaque aut nam optio magnam.
-                  tracking_url: Beatae illum modi.
+                  tracking_number: Vel veritatis.
+                  tracking_url: Consequatur itaque aut nam optio magnam.
         "401":
           description: Unauthorized response.
           content:
@@ -227,6 +255,7 @@ paths:
                 country_name: US
                 first_name: He
                 last_name: John
+                name: He
                 phone_number: 150xxxxxxxx
                 state_code: S
                 state_name: U
@@ -298,6 +327,7 @@ paths:
                 country_name: US
                 first_name: He
                 last_name: John
+                name: He
                 phone_number: 150xxxxxxxx
                 state_code: S
                 state_name: U
@@ -309,6 +339,10 @@ paths:
               id: 1
               is_pickup: true
               items:
+                - barcode: YCrankshaft
+                  product_name: NSS Mate 40E
+                  product_sku: YCrankshaft
+                  qty: 3
                 - barcode: YCrankshaft
                   product_name: NSS Mate 40E
                   product_sku: YCrankshaft
@@ -374,7 +408,7 @@ paths:
                 example:
                   - client_order_id: xxx1234
                     items:
-                      - barcode: xxxx
+                      - barcode: xxx
                         declared_cn_name: NSS
                         declared_en_name: NSS
                         declared_value_in_eur: 10.07
@@ -393,7 +427,7 @@ paths:
                         product_weight: 10
                         product_width: 10
                         qty: 1
-                      - barcode: xxxx
+                      - barcode: xxx
                         declared_cn_name: NSS
                         declared_en_name: NSS
                         declared_value_in_eur: 10.07
@@ -414,11 +448,11 @@ paths:
                         qty: 1
                     platform_order_id: 123
                     status: 1
-                    tracking_number: Nihil debitis enim exercitationem.
-                    tracking_url: Tenetur enim sit molestiae.
+                    tracking_number: Vero est.
+                    tracking_url: Quia nihil debitis enim exercitationem repudiandae.
                   - client_order_id: xxx1234
                     items:
-                      - barcode: xxxx
+                      - barcode: xxx
                         declared_cn_name: NSS
                         declared_en_name: NSS
                         declared_value_in_eur: 10.07
@@ -437,7 +471,7 @@ paths:
                         product_weight: 10
                         product_width: 10
                         qty: 1
-                      - barcode: xxxx
+                      - barcode: xxx
                         declared_cn_name: NSS
                         declared_en_name: NSS
                         declared_value_in_eur: 10.07
@@ -458,12 +492,12 @@ paths:
                         qty: 1
                     platform_order_id: 123
                     status: 1
-                    tracking_number: Nihil debitis enim exercitationem.
-                    tracking_url: Tenetur enim sit molestiae.
+                    tracking_number: Vero est.
+                    tracking_url: Quia nihil debitis enim exercitationem repudiandae.
               example:
                 - client_order_id: xxx1234
                   items:
-                    - barcode: xxxx
+                    - barcode: xxx
                       declared_cn_name: NSS
                       declared_en_name: NSS
                       declared_value_in_eur: 10.07
@@ -482,7 +516,7 @@ paths:
                       product_weight: 10
                       product_width: 10
                       qty: 1
-                    - barcode: xxxx
+                    - barcode: xxx
                       declared_cn_name: NSS
                       declared_en_name: NSS
                       declared_value_in_eur: 10.07
@@ -503,11 +537,11 @@ paths:
                       qty: 1
                   platform_order_id: 123
                   status: 1
-                  tracking_number: Nihil debitis enim exercitationem.
-                  tracking_url: Tenetur enim sit molestiae.
+                  tracking_number: Vero est.
+                  tracking_url: Quia nihil debitis enim exercitationem repudiandae.
                 - client_order_id: xxx1234
                   items:
-                    - barcode: xxxx
+                    - barcode: xxx
                       declared_cn_name: NSS
                       declared_en_name: NSS
                       declared_value_in_eur: 10.07
@@ -526,7 +560,7 @@ paths:
                       product_weight: 10
                       product_width: 10
                       qty: 1
-                    - barcode: xxxx
+                    - barcode: xxx
                       declared_cn_name: NSS
                       declared_en_name: NSS
                       declared_value_in_eur: 10.07
@@ -547,11 +581,11 @@ paths:
                       qty: 1
                   platform_order_id: 123
                   status: 1
-                  tracking_number: Nihil debitis enim exercitationem.
-                  tracking_url: Tenetur enim sit molestiae.
+                  tracking_number: Vero est.
+                  tracking_url: Quia nihil debitis enim exercitationem repudiandae.
                 - client_order_id: xxx1234
                   items:
-                    - barcode: xxxx
+                    - barcode: xxx
                       declared_cn_name: NSS
                       declared_en_name: NSS
                       declared_value_in_eur: 10.07
@@ -570,7 +604,7 @@ paths:
                       product_weight: 10
                       product_width: 10
                       qty: 1
-                    - barcode: xxxx
+                    - barcode: xxx
                       declared_cn_name: NSS
                       declared_en_name: NSS
                       declared_value_in_eur: 10.07
@@ -591,8 +625,52 @@ paths:
                       qty: 1
                   platform_order_id: 123
                   status: 1
-                  tracking_number: Nihil debitis enim exercitationem.
-                  tracking_url: Tenetur enim sit molestiae.
+                  tracking_number: Vero est.
+                  tracking_url: Quia nihil debitis enim exercitationem repudiandae.
+                - client_order_id: xxx1234
+                  items:
+                    - barcode: xxx
+                      declared_cn_name: NSS
+                      declared_en_name: NSS
+                      declared_value_in_eur: 10.07
+                      declared_value_in_usd: 10.07
+                      hs_code: xxx
+                      product_attributes:
+                        - battery
+                        - cosmetic
+                        - liquid
+                        - magnetic
+                      product_height: 10
+                      product_length: 10
+                      product_name: NSS mate40
+                      product_price: 10.3
+                      product_sku: xxxx
+                      product_weight: 10
+                      product_width: 10
+                      qty: 1
+                    - barcode: xxx
+                      declared_cn_name: NSS
+                      declared_en_name: NSS
+                      declared_value_in_eur: 10.07
+                      declared_value_in_usd: 10.07
+                      hs_code: xxx
+                      product_attributes:
+                        - battery
+                        - cosmetic
+                        - liquid
+                        - magnetic
+                      product_height: 10
+                      product_length: 10
+                      product_name: NSS mate40
+                      product_price: 10.3
+                      product_sku: xxxx
+                      product_weight: 10
+                      product_width: 10
+                      qty: 1
+                  platform_order_id: 123
+                  status: 1
+                  tracking_number: Vero est.
+                  tracking_url: Quia nihil debitis enim exercitationem repudiandae.
         "401":
           description: Unauthorized response.
           content:
@@ -626,7 +704,7 @@ paths:
               id: 1
               inbound_order_id: 1
               items:
-                - barcode: xxxx
+                - barcode: xxx
                   declared_cn_name: NSS
                   declared_en_name: NSS
                   declared_value_in_eur: 10.07
@@ -645,6 +723,26 @@ paths:
                   product_weight: 10
                   product_width: 10
                   qty: 1
+                - barcode: xxx
+                  declared_cn_name: NSS
+                  declared_en_name: NSS
+                  declared_value_in_eur: 10.07
+                  declared_value_in_usd: 10.07
+                  hs_code: xxx
+                  product_attributes:
+                    - battery
+                    - cosmetic
+                    - liquid
+                    - magnetic
+                  product_height: 10
+                  product_length: 10
+                  product_name: NSS mate40
+                  product_price: 10.3
+                  product_sku: xxxx
+                  product_weight: 10
+                  product_width: 10
+                  qty: 1
+              package_id: 1
               receiver_info:
                 address1: address1
                 address2: address2
@@ -653,6 +751,7 @@ paths:
                 country_name: US
                 first_name: He
                 last_name: John
+                name: He
                 phone_number: 150xxxxxxxx
                 state_code: S
                 state_name: U
@@ -703,7 +802,7 @@ paths:
               id: 1
               inbound_order_id: 1
               items:
-                - barcode: xxxx
+                - barcode: xxx
                   declared_cn_name: NSS
                   declared_en_name: NSS
                   declared_value_in_eur: 10.07
@@ -722,7 +821,7 @@ paths:
                   product_weight: 10
                   product_width: 10
                   qty: 1
-                - barcode: xxxx
+                - barcode: xxx
                   declared_cn_name: NSS
                   declared_en_name: NSS
                   declared_value_in_eur: 10.07
@@ -741,7 +840,7 @@ paths:
                   product_weight: 10
                   product_width: 10
                   qty: 1
-                - barcode: xxxx
+                - barcode: xxx
                   declared_cn_name: NSS
                   declared_en_name: NSS
                   declared_value_in_eur: 10.07
@@ -760,6 +859,7 @@ paths:
                   product_weight: 10
                   product_width: 10
                   qty: 1
+              package_id: 1
               receiver_info:
                 address1: address1
                 address2: address2
@@ -768,6 +868,7 @@ paths:
                 country_name: US
                 first_name: He
                 last_name: John
+                name: He
                 phone_number: 150xxxxxxxx
                 state_code: S
                 state_name: U
@@ -808,7 +909,8 @@ paths:
               $ref: '#/components/schemas/BatchesCreateProductRequestBody'
             example:
               products:
-                - customer_code: xxx
+                - barcode_service: false
+                  customer_code: xxx
                   declared_cn_name: xxx
                   declared_en_name: xxx
                   declared_value_in_eur: 50
@@ -817,7 +919,6 @@ paths:
                   hs_code: xxx
                   id: 1
                   product_attributes:
-                    - normal
                     - liquid
                     - battery
                     - cosmetic
@@ -832,69 +933,6 @@ paths:
                   product_weight: 10
                   product_width: 1
                   qty: 1
-                  tag_service: false
-                  tags:
-                    - withDate
-                    - withMadeInChina
-                  with_barcode: false
-                - customer_code: xxx
-                  declared_cn_name: xxx
-                  declared_en_name: xxx
-                  declared_value_in_eur: 50
-                  declared_value_in_usd: 50
-                  enabled_nss_barcode: false
-                  hs_code: xxx
-                  id: 1
-                  product_attributes:
-                    - normal
-                    - liquid
-                    - battery
-                    - cosmetic
-                    - magnetic
-                  product_barcode: xxx
-                  product_height: 2
-                  product_image:
-                    - url
-                  product_length: 1
-                  product_name: xxx
-                  product_sku: xxx
-                  product_weight: 10
-                  product_width: 1
-                  qty: 1
-                  tag_service: false
-                  tags:
-                    - withDate
-                    - withMadeInChina
-                  with_barcode: false
-                - customer_code: xxx
-                  declared_cn_name: xxx
-                  declared_en_name: xxx
-                  declared_value_in_eur: 50
-                  declared_value_in_usd: 50
-                  enabled_nss_barcode: false
-                  hs_code: xxx
-                  id: 1
-                  product_attributes:
-                    - normal
-                    - liquid
-                    - battery
-                    - cosmetic
-                    - magnetic
-                  product_barcode: xxx
-                  product_height: 2
-                  product_image:
-                    - url
-                  product_length: 1
-                  product_name: xxx
-                  product_sku: xxx
-                  product_weight: 10
-                  product_width: 1
-                  qty: 1
-                  tag_service: false
-                  tags:
-                    - withDate
-                    - withMadeInChina
-                  with_barcode: false
       responses:
         "200":
           description: OK response.
@@ -904,24 +942,20 @@ paths:
                 $ref: '#/components/schemas/MultiProductRsp'
               example:
                 results:
-                  - barcode: Excepturi adipisci optio asperiores autem enim quaerat.
-                    error_msg: Aut doloremque aut saepe.
-                    product_id: 5293245933792778643
-                    product_name: Voluptates itaque vero maiores.
-                    sku: Ut inventore architecto laboriosam architecto aut perferendis.
-                    status: Exercitationem est.
-                  - barcode: Excepturi adipisci optio asperiores autem enim quaerat.
-                    error_msg: Aut doloremque aut saepe.
-                    product_id: 5293245933792778643
-                    product_name: Voluptates itaque vero maiores.
-                    sku: Ut inventore architecto laboriosam architecto aut perferendis.
-                    status: Exercitationem est.
-                  - barcode: Excepturi adipisci optio asperiores autem enim quaerat.
-                    error_msg: Aut doloremque aut saepe.
-                    product_id: 5293245933792778643
-                    product_name: Voluptates itaque vero maiores.
-                    sku: Ut inventore architecto laboriosam architecto aut perferendis.
-                    status: Exercitationem est.
+                  - barcode: Aut doloremque aut saepe.
+                    error_msg: Et exercitationem est.
+                    product_id: 6788594783383084410
+                    product_name: Ut inventore architecto laboriosam architecto aut
+                      perferendis.
+                    sku: Excepturi adipisci optio asperiores autem enim quaerat.
+                    status: Quibusdam consequatur.
+                  - barcode: Aut doloremque aut saepe.
+                    error_msg: Et exercitationem est.
+                    product_id: 6788594783383084410
+                    product_name: Ut inventore architecto laboriosam architecto aut
+                      perferendis.
+                    sku: Excepturi adipisci optio asperiores autem enim quaerat.
+                    status: Quibusdam consequatur.
         "401":
           description: Unauthorized response.
           content:
@@ -944,6 +978,7 @@ paths:
             schema:
               $ref: '#/components/schemas/Product'
             example:
+              barcode_service: false
               customer_code: xxx
               declared_cn_name: xxx
               declared_en_name: xxx
@@ -953,7 +988,6 @@ paths:
               hs_code: xxx
               id: 1
               product_attributes:
-                - normal
                 - liquid
                 - battery
                 - cosmetic
@@ -968,11 +1002,6 @@ paths:
               product_weight: 10
               product_width: 1
               qty: 1
-              tag_service: false
-              tags:
-                - withDate
-                - withMadeInChina
-              with_barcode: false
       responses:
         "200":
           description: OK response.
@@ -1096,7 +1125,7 @@ paths:
             type: array
             items:
               type: string
-              example: Sit recusandae expedita enim assumenda enim.
+              example: Veniam placeat excepturi sit recusandae expedita.
             description: Product attributes
             example:
               - battery
@@ -1178,14 +1207,6 @@ paths:
                   total_cost: 45.89
                   type: 1
                   weight: 1000
-                - channel_id: 1
-                  channel_name: NSS
-                  currency: USD
-                  max_normal_days: 5
-                  min_normal_days: 3
-                  total_cost: 45.89
-                  type: 1
-                  weight: 1000
         "401":
           description: Unauthorized response.
           content:
@@ -1211,8 +1232,8 @@ paths:
           schema:
             type: string
             description: tracking number of order
-            example: Est quibusdam id quis sed ducimus maiores.
-          example: Adipisci cum.
+            example: Enim possimus voluptatem est quibusdam id quis.
+          example: Ducimus maiores aspernatur adipisci cum et rem.
         - name: type
           in: query
           description: type(1 tracking_number 2 order_id)
@@ -1243,16 +1264,6 @@ paths:
                         timestamp: "2022-01-27 00:00:00"
                       - content: shipping done
                         timestamp: "2022-01-27 00:00:00"
-                    order_id: xxx
-                    status: 0
-                    tracking_number: NSS193719374,NSS193719
-                    tracking_url: http://example.com
-                    type: 1
-                  - details:
-                      - content: shipping done
-                        timestamp: "2022-01-27 00:00:00"
-                      - content: shipping done
-                        timestamp: "2022-01-27 00:00:00"
                       - content: shipping done
                         timestamp: "2022-01-27 00:00:00"
                     order_id: xxx
@@ -1267,12 +1278,16 @@ paths:
                         timestamp: "2022-01-27 00:00:00"
                       - content: shipping done
                         timestamp: "2022-01-27 00:00:00"
+                      - content: shipping done
+                        timestamp: "2022-01-27 00:00:00"
                     order_id: xxx
                     status: 0
                     tracking_number: NSS193719374,NSS193719
                     tracking_url: http://example.com
                     type: 1
                   - details:
+                      - content: shipping done
+                        timestamp: "2022-01-27 00:00:00"
                       - content: shipping done
                         timestamp: "2022-01-27 00:00:00"
                       - content: shipping done
@@ -1292,12 +1307,44 @@ paths:
                       timestamp: "2022-01-27 00:00:00"
                     - content: shipping done
                       timestamp: "2022-01-27 00:00:00"
+                    - content: shipping done
+                      timestamp: "2022-01-27 00:00:00"
                   order_id: xxx
                   status: 0
                   tracking_number: NSS193719374,NSS193719
                   tracking_url: http://example.com
                   type: 1
                 - details:
+                    - content: shipping done
+                      timestamp: "2022-01-27 00:00:00"
+                    - content: shipping done
+                      timestamp: "2022-01-27 00:00:00"
+                    - content: shipping done
+                      timestamp: "2022-01-27 00:00:00"
+                    - content: shipping done
+                      timestamp: "2022-01-27 00:00:00"
+                  order_id: xxx
+                  status: 0
+                  tracking_number: NSS193719374,NSS193719
+                  tracking_url: http://example.com
+                  type: 1
+                - details:
+                    - content: shipping done
+                      timestamp: "2022-01-27 00:00:00"
+                    - content: shipping done
+                      timestamp: "2022-01-27 00:00:00"
+                    - content: shipping done
+                      timestamp: "2022-01-27 00:00:00"
+                    - content: shipping done
+                      timestamp: "2022-01-27 00:00:00"
+                  order_id: xxx
+                  status: 0
+                  tracking_number: NSS193719374,NSS193719
+                  tracking_url: http://example.com
+                  type: 1
+                - details:
+                    - content: shipping done
+                      timestamp: "2022-01-27 00:00:00"
                     - content: shipping done
                       timestamp: "2022-01-27 00:00:00"
                     - content: shipping done
@@ -1361,9 +1408,9 @@ components:
         barcode:
           type: string
           description: barcode
-          example: Sit sit doloribus dolor.
+          example: Quam quia eos sed enim consectetur enim.
       example:
-        barcode: Blanditiis nesciunt recusandae qui sunt.
+        barcode: Ut dignissimos beatae expedita eius et repudiandae.
       required:
         - barcode
     BatchesCreateProductRequestBody:
@@ -1375,7 +1422,8 @@ components:
             $ref: '#/components/schemas/Product'
           description: product info
           example:
-            - customer_code: xxx
+            - barcode_service: false
+              customer_code: xxx
               declared_cn_name: xxx
               declared_en_name: xxx
               declared_value_in_eur: 50
@@ -1384,7 +1432,6 @@ components:
               hs_code: xxx
               id: 1
               product_attributes:
-                - normal
                 - liquid
                 - battery
                 - cosmetic
@@ -1399,12 +1446,8 @@ components:
               product_weight: 10
               product_width: 1
               qty: 1
-              tag_service: false
-              tags:
-                - withDate
-                - withMadeInChina
-              with_barcode: false
-            - customer_code: xxx
+            - barcode_service: false
+              customer_code: xxx
               declared_cn_name: xxx
               declared_en_name: xxx
               declared_value_in_eur: 50
@@ -1413,7 +1456,6 @@ components:
               hs_code: xxx
               id: 1
               product_attributes:
-                - normal
                 - liquid
                 - battery
                 - cosmetic
@@ -1428,43 +1470,11 @@ components:
               product_weight: 10
               product_width: 1
               qty: 1
-              tag_service: false
-              tags:
-                - withDate
-                - withMadeInChina
-              with_barcode: false
-            - customer_code: xxx
-              declared_cn_name: xxx
-              declared_en_name: xxx
-              declared_value_in_eur: 50
-              declared_value_in_usd: 50
-              enabled_nss_barcode: false
-              hs_code: xxx
-              id: 1
-              product_attributes:
-                - normal
-                - liquid
-                - battery
-                - cosmetic
-                - magnetic
-              product_barcode: xxx
-              product_height: 2
-              product_image:
-                - url
-              product_length: 1
-              product_name: xxx
-              product_sku: xxx
-              product_weight: 10
-              product_width: 1
-              qty: 1
-              tag_service: false
-              tags:
-                - withDate
-                - withMadeInChina
-              with_barcode: false
+          minItems: 1
       example:
         products:
-          - customer_code: xxx
+          - barcode_service: false
+            customer_code: xxx
             declared_cn_name: xxx
             declared_en_name: xxx
             declared_value_in_eur: 50
@@ -1473,7 +1483,6 @@ components:
             hs_code: xxx
             id: 1
             product_attributes:
-              - normal
               - liquid
               - battery
               - cosmetic
@@ -1488,12 +1497,8 @@ components:
             product_weight: 10
             product_width: 1
             qty: 1
-            tag_service: false
-            tags:
-              - withDate
-              - withMadeInChina
-            with_barcode: false
-          - customer_code: xxx
+          - barcode_service: false
+            customer_code: xxx
             declared_cn_name: xxx
             declared_en_name: xxx
             declared_value_in_eur: 50
@@ -1502,7 +1507,6 @@ components:
             hs_code: xxx
             id: 1
             product_attributes:
-              - normal
               - liquid
               - battery
               - cosmetic
@@ -1517,11 +1521,6 @@ components:
             product_weight: 10
             product_width: 1
             qty: 1
-            tag_service: false
-            tags:
-              - withDate
-              - withMadeInChina
-            with_barcode: false
       required:
         - products
     CreateInboundOrderRequestBody:
@@ -1573,6 +1572,14 @@ components:
               product_name: NSS Mate 40E
               product_sku: YCrankshaft
               qty: 3
+            - barcode: YCrankshaft
+              product_name: NSS Mate 40E
+              product_sku: YCrankshaft
+              qty: 3
+            - barcode: YCrankshaft
+              product_name: NSS Mate 40E
+              product_sku: YCrankshaft
+              qty: 3
         requested_pickup_at:
           type: string
           description: requested pickup at
@@ -1604,6 +1611,7 @@ components:
           country_name: US
           first_name: He
           last_name: John
+          name: He
           phone_number: 150xxxxxxxx
           state_code: S
           state_name: U
@@ -1615,10 +1623,6 @@ components:
         id: 1
         is_pickup: true
         items:
-          - barcode: YCrankshaft
-            product_name: NSS Mate 40E
-            product_sku: YCrankshaft
-            qty: 3
           - barcode: YCrankshaft
             product_name: NSS Mate 40E
             product_sku: YCrankshaft
@@ -1698,7 +1702,26 @@ components:
             $ref: '#/components/schemas/OutboundOrderItem'
           description: order items
           example:
-            - barcode: xxxx
+            - barcode: xxx
+              declared_cn_name: NSS
+              declared_en_name: NSS
+              declared_value_in_eur: 10.07
+              declared_value_in_usd: 10.07
+              hs_code: xxx
+              product_attributes:
+                - battery
+                - cosmetic
+                - liquid
+                - magnetic
+              product_height: 10
+              product_length: 10
+              product_name: NSS mate40
+              product_price: 10.3
+              product_sku: xxxx
+              product_weight: 10
+              product_width: 10
+              qty: 1
+            - barcode: xxx
               declared_cn_name: NSS
               declared_en_name: NSS
               declared_value_in_eur: 10.07
@@ -1718,6 +1741,11 @@ components:
               product_width: 10
               qty: 1
           minItems: 1
+        package_id:
+          type: integer
+          description: package id
+          example: 1
+          format: int64
         receiver_info:
           $ref: '#/components/schemas/ShippingAddress'
         shipping_type:
@@ -1752,7 +1780,7 @@ components:
         id: 1
         inbound_order_id: 1
         items:
-          - barcode: xxxx
+          - barcode: xxx
             declared_cn_name: NSS
             declared_en_name: NSS
             declared_value_in_eur: 10.07
@@ -1771,44 +1799,7 @@ components:
             product_weight: 10
             product_width: 10
             qty: 1
-          - barcode: xxxx
-            declared_cn_name: NSS
-            declared_en_name: NSS
-            declared_value_in_eur: 10.07
-            declared_value_in_usd: 10.07
-            hs_code: xxx
-            product_attributes:
-              - battery
-              - cosmetic
-              - liquid
-              - magnetic
-            product_height: 10
-            product_length: 10
-            product_name: NSS mate40
-            product_price: 10.3
-            product_sku: xxxx
-            product_weight: 10
-            product_width: 10
-            qty: 1
-          - barcode: xxxx
-            declared_cn_name: NSS
-            declared_en_name: NSS
-            declared_value_in_eur: 10.07
-            declared_value_in_usd: 10.07
-            hs_code: xxx
-            product_attributes:
-              - battery
-              - cosmetic
-              - liquid
-              - magnetic
-            product_height: 10
-            product_length: 10
-            product_name: NSS mate40
-            product_price: 10.3
-            product_sku: xxxx
-            product_weight: 10
-            product_width: 10
-            qty: 1
+        package_id: 1
         receiver_info:
           address1: address1
           address2: address2
@@ -1817,6 +1808,7 @@ components:
           country_name: US
           first_name: He
           last_name: John
+          name: He
           phone_number: 150xxxxxxxx
           state_code: S
           state_name: U
@@ -1845,7 +1837,7 @@ components:
         fault:
           type: boolean
           description: Is the error a server-side fault?
-          example: true
+          example: false
         id:
           type: string
           description: ID is a unique identifier for this particular occurrence of
@@ -1863,7 +1855,7 @@ components:
         temporary:
           type: boolean
           description: Is the error temporary?
-          example: false
+          example: true
         timeout:
           type: boolean
           description: Is the error a timeout?
@@ -1904,9 +1896,9 @@ components:
         token:
           type: string
           description: token
-          example: Saepe aut laborum distinctio error.
+          example: Sed consectetur.
       example:
-        token: Voluptatem nihil.
+        token: Occaecati delectus rem quidem.
       required:
         - token
     ImageURL:
@@ -1968,11 +1960,11 @@ components:
         tracking_number:
           type: string
           description: tracking number
-          example: Vitae qui ut sed cupiditate et.
+          example: Voluptatem nihil.
         tracking_url:
           type: string
           description: tracking url
-          example: Ullam maiores sed quia.
+          example: Qui omnis ab ratione.
       description: OrderRsp describes the order info
       example:
         client_order_id: xxx1234
@@ -1996,8 +1988,8 @@ components:
         platform_order_id: 123
         status: 1
         timestamp: "2022-01-21 02:26:54"
-        tracking_number: Libero totam.
-        tracking_url: Velit officia nemo ullam magni eos labore.
+        tracking_number: Et alias praesentium placeat.
+        tracking_url: Ipsa vitae qui ut.
       required:
         - client_order_id
         - status
@@ -2063,36 +2055,36 @@ components:
         barcode:
           type: string
           description: barcode
-          example: Qui qui officiis fugiat molestias ad ex.
+          example: Non ut ut.
         error_msg:
           type: string
           description: error msg
-          example: Et ea eligendi.
+          example: Voluptatibus asperiores sed sunt nostrum.
         product_id:
           type: integer
           description: product id
-          example: 8401570334040367450
+          example: 8012739685144926431
           format: int64
         product_name:
           type: string
           description: product_name
-          example: Temporibus aut qui quas molestias veniam.
+          example: Voluptatibus modi dignissimos aspernatur iste est aperiam.
         sku:
           type: string
           description: sku
-          example: Aut fugit est illum.
+          example: Delectus laudantium nesciunt.
         status:
           type: string
           description: status
-          example: Est aperiam illo ut rerum.
+          example: Non quia accusantium quia sit deserunt.
       description: MultiProductRsp describes the multi product info
       example:
-        barcode: Quasi ut dignissimos beatae expedita eius.
-        error_msg: Sed enim consectetur.
-        product_id: 1066895700531071107
-        product_name: Consectetur repellat occaecati delectus rem quidem rerum.
-        sku: Repudiandae iusto.
-        status: Incidunt facere quis quam quia.
+        barcode: Ad ex quis aut fugit.
+        error_msg: Qui officiis fugiat.
+        product_id: 2309621338617594993
+        product_name: Molestias veniam molestias iusto.
+        sku: Illum expedita temporibus aut qui.
+        status: Rerum velit et ea eligendi tempora.
       required:
         - product_id
         - status
@@ -2109,38 +2101,44 @@ components:
             $ref: '#/components/schemas/MultiProductData'
           description: results
           example:
-            - barcode: Excepturi adipisci optio asperiores autem enim quaerat.
-              error_msg: Aut doloremque aut saepe.
-              product_id: 5293245933792778643
-              product_name: Voluptates itaque vero maiores.
-              sku: Ut inventore architecto laboriosam architecto aut perferendis.
-              status: Exercitationem est.
-            - barcode: Excepturi adipisci optio asperiores autem enim quaerat.
-              error_msg: Aut doloremque aut saepe.
-              product_id: 5293245933792778643
-              product_name: Voluptates itaque vero maiores.
-              sku: Ut inventore architecto laboriosam architecto aut perferendis.
-              status: Exercitationem est.
+            - barcode: Aut doloremque aut saepe.
+              error_msg: Et exercitationem est.
+              product_id: 6788594783383084410
+              product_name: Ut inventore architecto laboriosam architecto aut perferendis.
+              sku: Excepturi adipisci optio asperiores autem enim quaerat.
+              status: Quibusdam consequatur.
+            - barcode: Aut doloremque aut saepe.
+              error_msg: Et exercitationem est.
+              product_id: 6788594783383084410
+              product_name: Ut inventore architecto laboriosam architecto aut perferendis.
+              sku: Excepturi adipisci optio asperiores autem enim quaerat.
+              status: Quibusdam consequatur.
+            - barcode: Aut doloremque aut saepe.
+              error_msg: Et exercitationem est.
+              product_id: 6788594783383084410
+              product_name: Ut inventore architecto laboriosam architecto aut perferendis.
+              sku: Excepturi adipisci optio asperiores autem enim quaerat.
+              status: Quibusdam consequatur.
       example:
         results:
-          - barcode: Excepturi adipisci optio asperiores autem enim quaerat.
-            error_msg: Aut doloremque aut saepe.
-            product_id: 5293245933792778643
-            product_name: Voluptates itaque vero maiores.
-            sku: Ut inventore architecto laboriosam architecto aut perferendis.
-            status: Exercitationem est.
-          - barcode: Excepturi adipisci optio asperiores autem enim quaerat.
-            error_msg: Aut doloremque aut saepe.
-            product_id: 5293245933792778643
-            product_name: Voluptates itaque vero maiores.
-            sku: Ut inventore architecto laboriosam architecto aut perferendis.
-            status: Exercitationem est.
-          - barcode: Excepturi adipisci optio asperiores autem enim quaerat.
-            error_msg: Aut doloremque aut saepe.
-            product_id: 5293245933792778643
-            product_name: Voluptates itaque vero maiores.
-            sku: Ut inventore architecto laboriosam architecto aut perferendis.
-            status: Exercitationem est.
+          - barcode: Aut doloremque aut saepe.
+            error_msg: Et exercitationem est.
+            product_id: 6788594783383084410
+            product_name: Ut inventore architecto laboriosam architecto aut perferendis.
+            sku: Excepturi adipisci optio asperiores autem enim quaerat.
+            status: Quibusdam consequatur.
+          - barcode: Aut doloremque aut saepe.
+            error_msg: Et exercitationem est.
+            product_id: 6788594783383084410
+            product_name: Ut inventore architecto laboriosam architecto aut perferendis.
+            sku: Excepturi adipisci optio asperiores autem enim quaerat.
+            status: Quibusdam consequatur.
+          - barcode: Aut doloremque aut saepe.
+            error_msg: Et exercitationem est.
+            product_id: 6788594783383084410
+            product_name: Ut inventore architecto laboriosam architecto aut perferendis.
+            sku: Excepturi adipisci optio asperiores autem enim quaerat.
+            status: Quibusdam consequatur.
       required:
         - results
     OrderRsp:
@@ -2157,7 +2155,7 @@ components:
             $ref: '#/components/schemas/OutboundOrderItem'
           description: items
           example:
-            - barcode: xxxx
+            - barcode: xxx
               declared_cn_name: NSS
               declared_en_name: NSS
               declared_value_in_eur: 10.07
@@ -2176,7 +2174,7 @@ components:
               product_weight: 10
               product_width: 10
               qty: 1
-            - barcode: xxxx
+            - barcode: xxx
               declared_cn_name: NSS
               declared_en_name: NSS
               declared_value_in_eur: 10.07
@@ -2195,7 +2193,7 @@ components:
               product_weight: 10
               product_width: 10
               qty: 1
-            - barcode: xxxx
+            - barcode: xxx
               declared_cn_name: NSS
               declared_en_name: NSS
               declared_value_in_eur: 10.07
@@ -2227,16 +2225,16 @@ components:
         tracking_number:
           type: string
           description: tracking number
-          example: Adipisci perferendis suscipit nihil nesciunt debitis.
+          example: Tempore ullam maiores sed quia nemo.
         tracking_url:
           type: string
           description: tracking url
-          example: Aut eum.
+          example: Libero totam.
       description: OrderRsp describes the order info
       example:
         client_order_id: xxx1234
         items:
-          - barcode: xxxx
+          - barcode: xxx
             declared_cn_name: NSS
             declared_en_name: NSS
             declared_value_in_eur: 10.07
@@ -2255,7 +2253,7 @@ components:
             product_weight: 10
             product_width: 10
             qty: 1
-          - barcode: xxxx
+          - barcode: xxx
             declared_cn_name: NSS
             declared_en_name: NSS
             declared_value_in_eur: 10.07
@@ -2274,7 +2272,26 @@ components:
             product_weight: 10
             product_width: 10
             qty: 1
-          - barcode: xxxx
+          - barcode: xxx
+            declared_cn_name: NSS
+            declared_en_name: NSS
+            declared_value_in_eur: 10.07
+            declared_value_in_usd: 10.07
+            hs_code: xxx
+            product_attributes:
+              - battery
+              - cosmetic
+              - liquid
+              - magnetic
+            product_height: 10
+            product_length: 10
+            product_name: NSS mate40
+            product_price: 10.3
+            product_sku: xxxx
+            product_weight: 10
+            product_width: 10
+            qty: 1
+          - barcode: xxx
             declared_cn_name: NSS
             declared_en_name: NSS
             declared_value_in_eur: 10.07
@@ -2295,8 +2312,8 @@ components:
             qty: 1
         platform_order_id: 123
         status: 1
-        tracking_number: Sunt voluptatum maiores.
-        tracking_url: Impedit perferendis enim.
+        tracking_number: Officia nemo ullam magni eos.
+        tracking_url: Corrupti quis neque adipisci perferendis suscipit nihil.
       required:
         - client_order_id
         - status
@@ -2310,7 +2327,7 @@ components:
         barcode:
           type: string
           description: 产品barcode
-          example: xxxx
+          example: xxx
         declared_cn_name:
           type: string
           description: declared cn name
@@ -2337,7 +2354,7 @@ components:
           type: array
           items:
             type: string
-            example: Ab ratione non non et.
+            example: Sapiente dolores saepe.
           description: product attributes
           example:
             - battery
@@ -2383,7 +2400,7 @@ components:
           example: 1
           format: int64
       example:
-        barcode: xxxx
+        barcode: xxx
         declared_cn_name: NSS
         declared_en_name: NSS
         declared_value_in_eur: 10.07
@@ -2417,6 +2434,7 @@ components:
         - product_height
         - product_attributes
         - barcode
+        - declared_value_in_eur
     OutboundOrderRsp:
       type: object
       properties:
@@ -2435,6 +2453,13 @@ components:
     Product:
       type: object
       properties:
+        barcode_service:
+          type: boolean
+          description: barcode_service
+          example: false
+          enum:
+            - false
+            - true
         customer_code:
           type: string
           description: customer code
@@ -2481,10 +2506,9 @@ components:
           type: array
           items:
             type: string
-            example: Et delectus laudantium nesciunt possimus voluptatibus.
+            example: Sunt sunt voluptatum maiores.
           description: product attributes
           example:
-            - normal
             - liquid
             - battery
             - cosmetic
@@ -2503,7 +2527,7 @@ components:
           type: array
           items:
             type: string
-            example: Quia sit deserunt qui voluptatibus.
+            example: Aut eum.
           description: product image
           example:
             - url
@@ -2519,7 +2543,7 @@ components:
           maxLength: 50
         product_sku:
           type: string
-          description: NSS Sku
+          description: product sku
           example: xxx
           maxLength: 50
         product_weight:
@@ -2537,31 +2561,9 @@ components:
           description: quality
           example: 1
           format: int64
-        tag_service:
-          type: boolean
-          description: tag service
-          example: false
-          enum:
-            - false
-            - true
-        tags:
-          type: array
-          items:
-            type: string
-            example: Sed sunt nostrum velit non ut.
-          description: tags
-          example:
-            - withDate
-            - withMadeInChina
-        with_barcode:
-          type: boolean
-          description: with barcode
-          example: false
-          enum:
-            - false
-            - true
       description: Product describes the create product
       example:
+        barcode_service: false
         customer_code: xxx
         declared_cn_name: xxx
         declared_en_name: xxx
@@ -2571,7 +2573,6 @@ components:
         hs_code: xxx
         id: 1
         product_attributes:
-          - normal
           - liquid
           - battery
           - cosmetic
@@ -2586,13 +2587,7 @@ components:
         product_weight: 10
         product_width: 1
         qty: 1
-        tag_service: false
-        tags:
-          - withDate
-          - withMadeInChina
-        with_barcode: false
       required:
-        - product_image
         - product_sku
         - product_name
         - declared_en_name
@@ -2603,13 +2598,11 @@ components:
         - product_width
         - product_height
         - hs_code
-        - with_barcode
         - product_barcode
-        - tags
         - product_attributes
-        - tag_service
-        - enabled_nss_barcode
         - customer_code
+        - declared_value_in_eur
+        - barcode_service
     Quote:
       type: object
       properties:
@@ -2699,6 +2692,10 @@ components:
           type: string
           description: Last name
           example: John
+        name:
+          type: string
+          description: name
+          example: He
         phone_number:
           type: string
           description: Phone number
@@ -2724,6 +2721,7 @@ components:
         country_name: US
         first_name: He
         last_name: John
+        name: He
         phone_number: 150xxxxxxxx
         state_code: S
         state_name: U
@@ -2753,8 +2751,6 @@ components:
               timestamp: "2022-01-27 00:00:00"
             - content: shipping done
               timestamp: "2022-01-27 00:00:00"
-            - content: shipping done
-              timestamp: "2022-01-27 00:00:00"
         order_id:
           type: string
           description: order_id
@@ -2779,8 +2775,6 @@ components:
           format: int64
       example:
         details:
-          - content: shipping done
-            timestamp: "2022-01-27 00:00:00"
           - content: shipping done
             timestamp: "2022-01-27 00:00:00"
           - content: shipping done
@@ -2845,8 +2839,6 @@ components:
         - file
         - file_name
 tags:
-  - name: barcode
-    description: The barcode service performs operations on barcode
   - name: file
     description: The file service performs operations on file
   - name: order
