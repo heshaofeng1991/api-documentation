@@ -3283,13 +3283,13 @@ paths:
                         - Debitis aut.
                         - Sint placeat tenetur.
                       barcode: Odit voluptates repellat ipsa ut pariatur neque.
+                      id: 1196945775
                       images:
                         - Voluptates rerum et animi omnis.
                         - Quidem nesciunt delectus in.
                         - Aut minima veritatis voluptatum earum aut.
                       inventory: 2147601906543887452
                       name: Rerum dolores.
-                      product_id: 1196945775
                       sku: Sapiente deleniti ab necessitatibus.
                       status: 2188085446697081
                     - attributes:
@@ -3298,13 +3298,13 @@ paths:
                         - Debitis aut.
                         - Sint placeat tenetur.
                       barcode: Odit voluptates repellat ipsa ut pariatur neque.
+                      id: 1196945775
                       images:
                         - Voluptates rerum et animi omnis.
                         - Quidem nesciunt delectus in.
                         - Aut minima veritatis voluptatum earum aut.
                       inventory: 2147601906543887452
                       name: Rerum dolores.
-                      product_id: 1196945775
                       sku: Sapiente deleniti ab necessitatibus.
                       status: 2188085446697081
                     - attributes:
@@ -3313,13 +3313,13 @@ paths:
                         - Debitis aut.
                         - Sint placeat tenetur.
                       barcode: Odit voluptates repellat ipsa ut pariatur neque.
+                      id: 1196945775
                       images:
                         - Voluptates rerum et animi omnis.
                         - Quidem nesciunt delectus in.
                         - Aut minima veritatis voluptatum earum aut.
                       inventory: 2147601906543887452
                       name: Rerum dolores.
-                      product_id: 1196945775
                       sku: Sapiente deleniti ab necessitatibus.
                       status: 2188085446697081
                   meta:
@@ -9842,6 +9842,11 @@ components:
           type: string
           description: barcode
           example: Aut repellat fugiat quisquam praesentium sint.
+        id:
+          type: integer
+          description: id
+          example: 1943437088
+          format: int32
         images:
           type: array
           items:
@@ -9861,11 +9866,6 @@ components:
           type: string
           description: name
           example: Unde dolores voluptate id dolor molestias ut.
-        product_id:
-          type: integer
-          description: product id
-          example: 1943437088
-          format: int32
         sku:
           type: string
           description: sku
@@ -9882,17 +9882,17 @@ components:
           - Assumenda non.
           - Deleniti voluptatem numquam numquam illo nostrum aut.
         barcode: Illum qui voluptatibus quidem tenetur repudiandae molestias.
+        id: 822057471
         images:
           - Nihil ex ut.
           - Itaque animi quis dolorum soluta doloremque error.
           - Quia assumenda et reprehenderit.
         inventory: 4406214824983323163
         name: Rerum molestiae.
-        product_id: 822057471
         sku: Sit iusto beatae.
         status: 2125504718409371820
       required:
-        - product_id
+        - id
         - status
         - barcode
         - sku
@@ -9915,13 +9915,13 @@ components:
                 - Debitis aut.
                 - Sint placeat tenetur.
               barcode: Odit voluptates repellat ipsa ut pariatur neque.
+              id: 1196945775
               images:
                 - Voluptates rerum et animi omnis.
                 - Quidem nesciunt delectus in.
                 - Aut minima veritatis voluptatum earum aut.
               inventory: 2147601906543887452
               name: Rerum dolores.
-              product_id: 1196945775
               sku: Sapiente deleniti ab necessitatibus.
               status: 2188085446697081
             - attributes:
@@ -9930,13 +9930,13 @@ components:
                 - Debitis aut.
                 - Sint placeat tenetur.
               barcode: Odit voluptates repellat ipsa ut pariatur neque.
+              id: 1196945775
               images:
                 - Voluptates rerum et animi omnis.
                 - Quidem nesciunt delectus in.
                 - Aut minima veritatis voluptatum earum aut.
               inventory: 2147601906543887452
               name: Rerum dolores.
-              product_id: 1196945775
               sku: Sapiente deleniti ab necessitatibus.
               status: 2188085446697081
             - attributes:
@@ -9945,13 +9945,13 @@ components:
                 - Debitis aut.
                 - Sint placeat tenetur.
               barcode: Odit voluptates repellat ipsa ut pariatur neque.
+              id: 1196945775
               images:
                 - Voluptates rerum et animi omnis.
                 - Quidem nesciunt delectus in.
                 - Aut minima veritatis voluptatum earum aut.
               inventory: 2147601906543887452
               name: Rerum dolores.
-              product_id: 1196945775
               sku: Sapiente deleniti ab necessitatibus.
               status: 2188085446697081
         meta:
@@ -9965,13 +9965,13 @@ components:
               - Debitis aut.
               - Sint placeat tenetur.
             barcode: Odit voluptates repellat ipsa ut pariatur neque.
+            id: 1196945775
             images:
               - Voluptates rerum et animi omnis.
               - Quidem nesciunt delectus in.
               - Aut minima veritatis voluptatum earum aut.
             inventory: 2147601906543887452
             name: Rerum dolores.
-            product_id: 1196945775
             sku: Sapiente deleniti ab necessitatibus.
             status: 2188085446697081
           - attributes:
@@ -9980,13 +9980,13 @@ components:
               - Debitis aut.
               - Sint placeat tenetur.
             barcode: Odit voluptates repellat ipsa ut pariatur neque.
+            id: 1196945775
             images:
               - Voluptates rerum et animi omnis.
               - Quidem nesciunt delectus in.
               - Aut minima veritatis voluptatum earum aut.
             inventory: 2147601906543887452
             name: Rerum dolores.
-            product_id: 1196945775
             sku: Sapiente deleniti ab necessitatibus.
             status: 2188085446697081
           - attributes:
@@ -9995,13 +9995,13 @@ components:
               - Debitis aut.
               - Sint placeat tenetur.
             barcode: Odit voluptates repellat ipsa ut pariatur neque.
+            id: 1196945775
             images:
               - Voluptates rerum et animi omnis.
               - Quidem nesciunt delectus in.
               - Aut minima veritatis voluptatum earum aut.
             inventory: 2147601906543887452
             name: Rerum dolores.
-            product_id: 1196945775
             sku: Sapiente deleniti ab necessitatibus.
             status: 2188085446697081
           - attributes:
@@ -10010,13 +10010,13 @@ components:
               - Debitis aut.
               - Sint placeat tenetur.
             barcode: Odit voluptates repellat ipsa ut pariatur neque.
+            id: 1196945775
             images:
               - Voluptates rerum et animi omnis.
               - Quidem nesciunt delectus in.
               - Aut minima veritatis voluptatum earum aut.
             inventory: 2147601906543887452
             name: Rerum dolores.
-            product_id: 1196945775
             sku: Sapiente deleniti ab necessitatibus.
             status: 2188085446697081
         meta:
@@ -10049,13 +10049,13 @@ components:
                 - Debitis aut.
                 - Sint placeat tenetur.
               barcode: Odit voluptates repellat ipsa ut pariatur neque.
+              id: 1196945775
               images:
                 - Voluptates rerum et animi omnis.
                 - Quidem nesciunt delectus in.
                 - Aut minima veritatis voluptatum earum aut.
               inventory: 2147601906543887452
               name: Rerum dolores.
-              product_id: 1196945775
               sku: Sapiente deleniti ab necessitatibus.
               status: 2188085446697081
             - attributes:
@@ -10064,13 +10064,13 @@ components:
                 - Debitis aut.
                 - Sint placeat tenetur.
               barcode: Odit voluptates repellat ipsa ut pariatur neque.
+              id: 1196945775
               images:
                 - Voluptates rerum et animi omnis.
                 - Quidem nesciunt delectus in.
                 - Aut minima veritatis voluptatum earum aut.
               inventory: 2147601906543887452
               name: Rerum dolores.
-              product_id: 1196945775
               sku: Sapiente deleniti ab necessitatibus.
               status: 2188085446697081
             - attributes:
@@ -10079,13 +10079,13 @@ components:
                 - Debitis aut.
                 - Sint placeat tenetur.
               barcode: Odit voluptates repellat ipsa ut pariatur neque.
+              id: 1196945775
               images:
                 - Voluptates rerum et animi omnis.
                 - Quidem nesciunt delectus in.
                 - Aut minima veritatis voluptatum earum aut.
               inventory: 2147601906543887452
               name: Rerum dolores.
-              product_id: 1196945775
               sku: Sapiente deleniti ab necessitatibus.
               status: 2188085446697081
           meta:
