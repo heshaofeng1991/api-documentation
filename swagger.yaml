@@ -409,11 +409,11 @@ paths:
             schema:
               $ref: '#/components/schemas/CallbackWoocommerceRequestBody'
             example:
-              consumer_key: Sit neque omnis.
-              consumer_secret: Voluptatem est.
-              key_id: 97696091208996256
-              key_permissions: Distinctio minima consectetur.
-              user_id: Officiis rem repellendus.
+              consumer_key: Voluptatem est.
+              consumer_secret: Distinctio minima consectetur.
+              key_id: 8983489184454225831
+              key_permissions: Consequuntur aut rem occaecati ex commodi soluta.
+              user_id: Sit neque omnis.
       responses:
         "200":
           description: OK response.
@@ -422,7 +422,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/WoocommerceCallbackRsp'
               example:
-                success: false
+                success: true
         "401":
           description: Unauthorized response.
           content:
@@ -598,13 +598,6 @@ paths:
                           timestamp: "2022-01-27 00:00:00"
                         - content: shipping done
                           timestamp: "2022-01-27 00:00:00"
-                      order_id: YT000001,YT000002
-                      status: 0
-                      tracking_number: NSS193719374,NSS193719
-                      tracking_url: http://example.com
-                    - details:
-                        - content: shipping done
-                          timestamp: "2022-01-27 00:00:00"
                         - content: shipping done
                           timestamp: "2022-01-27 00:00:00"
                       order_id: YT000001,YT000002
@@ -616,11 +609,15 @@ paths:
                           timestamp: "2022-01-27 00:00:00"
                         - content: shipping done
                           timestamp: "2022-01-27 00:00:00"
+                        - content: shipping done
+                          timestamp: "2022-01-27 00:00:00"
                       order_id: YT000001,YT000002
                       status: 0
                       tracking_number: NSS193719374,NSS193719
                       tracking_url: http://example.com
                     - details:
+                        - content: shipping done
+                          timestamp: "2022-01-27 00:00:00"
                         - content: shipping done
                           timestamp: "2022-01-27 00:00:00"
                         - content: shipping done
@@ -3492,13 +3489,13 @@ paths:
             description: page
             example: "1"
           example: "1"
-        - name: page_size
+        - name: pageSize
           in: query
-          description: page_size
+          description: pageSize
           allowEmptyValue: true
           schema:
             type: string
-            description: page_size
+            description: pageSize
             example: "10"
           example: "10"
       responses:
@@ -3550,7 +3547,7 @@ paths:
               barcode: Sed consectetur.
               current: 4050725676575013100
               inventory: false
-              page_size: 10
+              pageSize: 10
               product_attributes:
                 - normal
                 - liquid
@@ -3570,7 +3567,6 @@ paths:
               example:
                 code: 0
                 data:
-                  current: 6449564981714975436
                   list:
                     - barcode: Rerum provident in vero iste pariatur qui.
                       image: Eligendi excepturi accusamus molestiae ut et nihil.
@@ -3608,7 +3604,10 @@ paths:
                       product_name: Expedita enim assumenda.
                       sku: Placeat excepturi sit.
                       status: 1014996474708792619
-                  total: 7066940518520526205
+                  mate:
+                    current: 1
+                    pageSize: 1
+                    total: 1
                 message: description error information
         "401":
           description: Unauthorized response.
@@ -3821,22 +3820,6 @@ paths:
                       total_cost: 45.89
                       type: 1
                       weight: 1000
-                    - channel_id: 1
-                      channel_name: NSS
-                      currency: USD
-                      max_normal_days: 5
-                      min_normal_days: 3
-                      total_cost: 45.89
-                      type: 1
-                      weight: 1000
-                    - channel_id: 1
-                      channel_name: NSS
-                      currency: USD
-                      max_normal_days: 5
-                      min_normal_days: 3
-                      total_cost: 45.89
-                      type: 1
-                      weight: 1000
                 message: description error information
         "401":
           description: Unauthorized response.
@@ -3864,28 +3847,27 @@ paths:
               example:
                 code: 0
                 data:
-                  balance: 0.9477167479705673
-                  country_code: Eos quia aliquid.
-                  currency: Inventore sint numquam ut quod dicta.
-                  default_warehouse: 92657297
-                  first_inbound_at: Eum sapiente deleniti ab necessitatibus sit.
-                  handling_fee: 0.1728492202238933
-                  prepay_tariff: true
+                  balance: 0.38364842759814466
+                  country_code: Ab necessitatibus sit rerum dolores distinctio qui.
+                  currency: Beatae veniam ut rerum et.
+                  default_warehouse: 1097042696
+                  first_inbound_at: Optio odit voluptates repellat ipsa ut pariatur.
+                  handling_fee: 0.14788487042617604
+                  prepay_tariff: false
                   preset_channel_id:
-                    - 509453
-                    - 1540341065
-                    - 1371332417
-                  shipping_option: 465550104
-                  storage_unit_price: 0.2114585136779224
-                  tenant_code: Sit est beatae veniam ut rerum et.
-                  tenant_id: 1713995382
+                    - 363365753
+                    - 60079276
+                    - 261595102
+                  shipping_option: 521458496
+                  storage_unit_price: 0.07159893437936704
+                  tenant_code: Qui sit.
+                  tenant_id: 607018834
                   test_channel_id:
-                    - 946562792
-                    - 65549509
-                    - 243623152
-                    - 1590832825
-                  uk_tariff_number: Debitis aut.
-                  us_tariff_number: Impedit qui vero enim dignissimos.
+                    - 2035206219
+                    - 371190874
+                    - 1196945775
+                  uk_tariff_number: Dignissimos et debitis.
+                  us_tariff_number: Quia aliquid culpa impedit qui vero.
                 message: description error information
         "401":
           description: Unauthorized response.
@@ -3909,12 +3891,12 @@ paths:
             schema:
               $ref: '#/components/schemas/UpdateTenantInfoRequestBody'
             example:
-              country_code: Ipsum sit.
-              default_warehouse: 1172998101
-              prepay_tariff: true
-              shipping_option: 227387775
-              uk_tariff_number: Error quidem.
-              us_tariff_number: Rerum et animi.
+              country_code: Tenetur ipsum sit voluptates rerum.
+              default_warehouse: 227387775
+              prepay_tariff: false
+              shipping_option: 1847256805
+              uk_tariff_number: Veniam aut minima veritatis.
+              us_tariff_number: Animi omnis error quidem nesciunt delectus.
       responses:
         "200":
           description: OK response.
@@ -3925,7 +3907,7 @@ paths:
               example:
                 code: 0
                 data:
-                  status: 6552914731070376616
+                  status: 6161508919304162105
                 message: description error information
         "401":
           description: Unauthorized response.
@@ -3955,12 +3937,20 @@ paths:
                 data:
                   - created_at: "2020-01-01T00:00:00Z"
                     integration_at: "2020-01-01T00:00:00Z"
-                    platform: Officiis sequi veniam.
-                    store: Sunt recusandae sit distinctio provident inventore excepturi.
+                    platform: Excepturi excepturi officiis sequi.
+                    store: Incidunt magnam sunt recusandae sit distinctio provident.
                   - created_at: "2020-01-01T00:00:00Z"
                     integration_at: "2020-01-01T00:00:00Z"
-                    platform: Officiis sequi veniam.
-                    store: Sunt recusandae sit distinctio provident inventore excepturi.
+                    platform: Excepturi excepturi officiis sequi.
+                    store: Incidunt magnam sunt recusandae sit distinctio provident.
+                  - created_at: "2020-01-01T00:00:00Z"
+                    integration_at: "2020-01-01T00:00:00Z"
+                    platform: Excepturi excepturi officiis sequi.
+                    store: Incidunt magnam sunt recusandae sit distinctio provident.
+                  - created_at: "2020-01-01T00:00:00Z"
+                    integration_at: "2020-01-01T00:00:00Z"
+                    platform: Excepturi excepturi officiis sequi.
+                    store: Incidunt magnam sunt recusandae sit distinctio provident.
                 message: description error information
         "401":
           description: Unauthorized response.
@@ -4043,13 +4033,6 @@ paths:
                           timestamp: "2022-01-27 00:00:00"
                         - content: shipping done
                           timestamp: "2022-01-27 00:00:00"
-                      order_id: YT000001,YT000002
-                      status: 0
-                      tracking_number: NSS193719374,NSS193719
-                      tracking_url: http://example.com
-                    - details:
-                        - content: shipping done
-                          timestamp: "2022-01-27 00:00:00"
                         - content: shipping done
                           timestamp: "2022-01-27 00:00:00"
                       order_id: YT000001,YT000002
@@ -4061,11 +4044,15 @@ paths:
                           timestamp: "2022-01-27 00:00:00"
                         - content: shipping done
                           timestamp: "2022-01-27 00:00:00"
+                        - content: shipping done
+                          timestamp: "2022-01-27 00:00:00"
                       order_id: YT000001,YT000002
                       status: 0
                       tracking_number: NSS193719374,NSS193719
                       tracking_url: http://example.com
                     - details:
+                        - content: shipping done
+                          timestamp: "2022-01-27 00:00:00"
                         - content: shipping done
                           timestamp: "2022-01-27 00:00:00"
                         - content: shipping done
@@ -4165,7 +4152,7 @@ paths:
             schema:
               $ref: '#/components/schemas/UpdateUserInfoRequestBody'
             example:
-              user_name: Ut ex quaerat praesentium quod sit.
+              user_name: Quod atque voluptatibus numquam veniam.
       responses:
         "200":
           description: OK response.
@@ -4176,7 +4163,7 @@ paths:
               example:
                 code: 0
                 data:
-                  status: 6552914731070376616
+                  status: 6161508919304162105
                 message: description error information
         "401":
           description: Unauthorized response.
@@ -4215,7 +4202,7 @@ paths:
               example:
                 code: 0
                 data:
-                  status: 6552914731070376616
+                  status: 6161508919304162105
                 message: description error information
         "401":
           description: Unauthorized response.
@@ -4253,8 +4240,8 @@ paths:
               example:
                 code: 0
                 data:
-                  status: 8223730657467268339
-                  token: Assumenda quo suscipit enim quisquam.
+                  status: 3962435057121041007
+                  token: Ut ex quaerat praesentium quod sit.
                 message: description error information
         "401":
           description: Unauthorized response.
@@ -4282,7 +4269,7 @@ paths:
               example:
                 code: 0
                 data:
-                  status: 6552914731070376616
+                  status: 6161508919304162105
                 message: description error information
         "401":
           description: Unauthorized response.
@@ -4320,7 +4307,7 @@ paths:
               example:
                 code: 0
                 data:
-                  status: 6552914731070376616
+                  status: 6161508919304162105
                 message: description error information
         "401":
           description: Unauthorized response.
@@ -4350,25 +4337,25 @@ paths:
                 data:
                   order_status:
                     - action:
-                        - Numquam veniam excepturi.
-                        - Placeat cum et est facilis beatae et.
+                        - Et est facilis beatae et.
                         - Qui aperiam qui porro eligendi.
-                      status: 8620565931619152900
+                        - Ut officiis rem.
+                      status: 1267515780834392257
                     - action:
-                        - Numquam veniam excepturi.
-                        - Placeat cum et est facilis beatae et.
+                        - Et est facilis beatae et.
                         - Qui aperiam qui porro eligendi.
-                      status: 8620565931619152900
+                        - Ut officiis rem.
+                      status: 1267515780834392257
                     - action:
-                        - Numquam veniam excepturi.
-                        - Placeat cum et est facilis beatae et.
+                        - Et est facilis beatae et.
                         - Qui aperiam qui porro eligendi.
-                      status: 8620565931619152900
+                        - Ut officiis rem.
+                      status: 1267515780834392257
                     - action:
-                        - Numquam veniam excepturi.
-                        - Placeat cum et est facilis beatae et.
+                        - Et est facilis beatae et.
                         - Qui aperiam qui porro eligendi.
-                      status: 8620565931619152900
+                        - Ut officiis rem.
+                      status: 1267515780834392257
                 message: description error information
         "401":
           description: Unauthorized response.
@@ -4410,8 +4397,8 @@ paths:
               example:
                 code: 0
                 data:
-                  status: 8223730657467268339
-                  token: Assumenda quo suscipit enim quisquam.
+                  status: 3962435057121041007
+                  token: Ut ex quaerat praesentium quod sit.
                 message: description error information
         "401":
           description: Unauthorized response.
@@ -4447,7 +4434,7 @@ paths:
               example:
                 code: 0
                 data:
-                  status: 6552914731070376616
+                  status: 6161508919304162105
                 message: description error information
         "401":
           description: Unauthorized response.
@@ -6698,17 +6685,17 @@ components:
         platform:
           type: string
           description: shopify
-          example: Officia tempore et consectetur magnam.
+          example: Nihil praesentium.
         store:
           type: string
           description: NSS store
-          example: Dolorem iusto nihil.
+          example: Inventore repellendus sunt qui dolorem.
       description: Integration
       example:
         created_at: "2020-01-01T00:00:00Z"
         integration_at: "2020-01-01T00:00:00Z"
-        platform: Eligendi sed voluptate iure quae eaque suscipit.
-        store: Mollitia eaque.
+        platform: Mollitia eaque.
+        store: Tempore et consectetur magnam.
     IntegrationListResult:
       type: object
       properties:
@@ -9460,48 +9447,48 @@ components:
           description: order_status
           example:
             - action:
-                - Numquam veniam excepturi.
-                - Placeat cum et est facilis beatae et.
+                - Et est facilis beatae et.
                 - Qui aperiam qui porro eligendi.
-              status: 8620565931619152900
+                - Ut officiis rem.
+              status: 1267515780834392257
             - action:
-                - Numquam veniam excepturi.
-                - Placeat cum et est facilis beatae et.
+                - Et est facilis beatae et.
                 - Qui aperiam qui porro eligendi.
-              status: 8620565931619152900
+                - Ut officiis rem.
+              status: 1267515780834392257
             - action:
-                - Numquam veniam excepturi.
-                - Placeat cum et est facilis beatae et.
+                - Et est facilis beatae et.
                 - Qui aperiam qui porro eligendi.
-              status: 8620565931619152900
+                - Ut officiis rem.
+              status: 1267515780834392257
             - action:
-                - Numquam veniam excepturi.
-                - Placeat cum et est facilis beatae et.
+                - Et est facilis beatae et.
                 - Qui aperiam qui porro eligendi.
-              status: 8620565931619152900
+                - Ut officiis rem.
+              status: 1267515780834392257
       description: OrderStatusData describes the details
       example:
         order_status:
           - action:
-              - Numquam veniam excepturi.
-              - Placeat cum et est facilis beatae et.
+              - Et est facilis beatae et.
               - Qui aperiam qui porro eligendi.
-            status: 8620565931619152900
+              - Ut officiis rem.
+            status: 1267515780834392257
           - action:
-              - Numquam veniam excepturi.
-              - Placeat cum et est facilis beatae et.
+              - Et est facilis beatae et.
               - Qui aperiam qui porro eligendi.
-            status: 8620565931619152900
+              - Ut officiis rem.
+            status: 1267515780834392257
           - action:
-              - Numquam veniam excepturi.
-              - Placeat cum et est facilis beatae et.
+              - Et est facilis beatae et.
               - Qui aperiam qui porro eligendi.
-            status: 8620565931619152900
+              - Ut officiis rem.
+            status: 1267515780834392257
           - action:
-              - Numquam veniam excepturi.
-              - Placeat cum et est facilis beatae et.
+              - Et est facilis beatae et.
               - Qui aperiam qui porro eligendi.
-            status: 8620565931619152900
+              - Ut officiis rem.
+            status: 1267515780834392257
     PermissionsRsp:
       type: object
       properties:
@@ -9521,25 +9508,25 @@ components:
         data:
           order_status:
             - action:
-                - Numquam veniam excepturi.
-                - Placeat cum et est facilis beatae et.
+                - Et est facilis beatae et.
                 - Qui aperiam qui porro eligendi.
-              status: 8620565931619152900
+                - Ut officiis rem.
+              status: 1267515780834392257
             - action:
-                - Numquam veniam excepturi.
-                - Placeat cum et est facilis beatae et.
+                - Et est facilis beatae et.
                 - Qui aperiam qui porro eligendi.
-              status: 8620565931619152900
+                - Ut officiis rem.
+              status: 1267515780834392257
             - action:
-                - Numquam veniam excepturi.
-                - Placeat cum et est facilis beatae et.
+                - Et est facilis beatae et.
                 - Qui aperiam qui porro eligendi.
-              status: 8620565931619152900
+                - Ut officiis rem.
+              status: 1267515780834392257
             - action:
-                - Numquam veniam excepturi.
-                - Placeat cum et est facilis beatae et.
+                - Et est facilis beatae et.
                 - Qui aperiam qui porro eligendi.
-              status: 8620565931619152900
+                - Ut officiis rem.
+              status: 1267515780834392257
         message: description error information
       required:
         - code
@@ -9779,11 +9766,6 @@ components:
     ProductsQueryData:
       type: object
       properties:
-        current:
-          type: integer
-          description: current
-          example: 8171400357128244986
-          format: int64
         list:
           type: array
           items:
@@ -9814,14 +9796,10 @@ components:
               product_name: Expedita enim assumenda.
               sku: Placeat excepturi sit.
               status: 1014996474708792619
-        total:
-          type: integer
-          description: total
-          example: 740222840307878507
-          format: int64
+        mate:
+          $ref: '#/components/schemas/MetaData'
       description: ProductsQueryData describes the query products resp
       example:
-        current: 9057684602127881015
         list:
           - barcode: Rerum provident in vero iste pariatur qui.
             image: Eligendi excepturi accusamus molestiae ut et nihil.
@@ -9871,11 +9849,12 @@ components:
             product_name: Expedita enim assumenda.
             sku: Placeat excepturi sit.
             status: 1014996474708792619
-        total: 6094125334999064016
+        mate:
+          current: 1
+          pageSize: 1
+          total: 1
       required:
         - list
-        - current
-        - total
     ProductsQueryRequestBody:
       type: object
       properties:
@@ -9895,9 +9874,9 @@ components:
           enum:
             - false
             - true
-        page_size:
+        pageSize:
           type: integer
-          description: page size
+          description: pageSize
           example: 10
           enum:
             - 10
@@ -9937,7 +9916,7 @@ components:
         barcode: Ad libero dolor quo.
         current: 7693128026876762125
         inventory: false
-        page_size: 10
+        pageSize: 10
         product_attributes:
           - normal
           - liquid
@@ -9964,7 +9943,6 @@ components:
       example:
         code: 0
         data:
-          current: 6449564981714975436
           list:
             - barcode: Rerum provident in vero iste pariatur qui.
               image: Eligendi excepturi accusamus molestiae ut et nihil.
@@ -10002,7 +9980,10 @@ components:
               product_name: Expedita enim assumenda.
               sku: Placeat excepturi sit.
               status: 1014996474708792619
-          total: 7066940518520526205
+          mate:
+            current: 1
+            pageSize: 1
+            total: 1
         message: description error information
       required:
         - code
@@ -10098,6 +10079,14 @@ components:
               total_cost: 45.89
               type: 1
               weight: 1000
+            - channel_id: 1
+              channel_name: NSS
+              currency: USD
+              max_normal_days: 5
+              min_normal_days: 3
+              total_cost: 45.89
+              type: 1
+              weight: 1000
       example:
         list:
           - channel_id: 1
@@ -10152,22 +10141,6 @@ components:
         code: 0
         data:
           list:
-            - channel_id: 1
-              channel_name: NSS
-              currency: USD
-              max_normal_days: 5
-              min_normal_days: 3
-              total_cost: 45.89
-              type: 1
-              weight: 1000
-            - channel_id: 1
-              channel_name: NSS
-              currency: USD
-              max_normal_days: 5
-              min_normal_days: 3
-              total_cost: 45.89
-              type: 1
-              weight: 1000
             - channel_id: 1
               channel_name: NSS
               currency: USD
@@ -10359,8 +10332,8 @@ components:
       example:
         code: 0
         data:
-          status: 8223730657467268339
-          token: Assumenda quo suscipit enim quisquam.
+          status: 3962435057121041007
+          token: Ut ex quaerat praesentium quod sit.
         message: description error information
       required:
         - code
@@ -10396,102 +10369,107 @@ components:
         balance:
           type: number
           description: balance
-          example: 0.03746445121771127
+          example: 0.7657609869124535
           format: double
         country_code:
           type: string
           description: country code of tariff number
-          example: Fuga consequatur reiciendis.
+          example: Fuga aut vel illo.
         currency:
           type: string
           description: currency
-          example: Possimus eaque quas ipsa provident ut aut.
+          example: Porro tempore ex harum quaerat optio.
         default_warehouse:
           type: integer
           description: default warehouse
-          example: 475595870
+          example: 455848715
           format: int32
         first_inbound_at:
           type: string
           description: first_inbound_at
-          example: Molestiae explicabo minus explicabo fuga aut vel.
+          example: Est eveniet consectetur enim optio.
         handling_fee:
           type: number
           description: handling_fee
-          example: 0.8981417916237528
+          example: 0.13945378822194282
           format: double
         prepay_tariff:
           type: boolean
           description: prepay tariff
-          example: true
+          example: false
         preset_channel_id:
           type: array
           items:
             type: integer
-            example: 2119867791
+            example: 12805581
             format: int32
           description: preset_channel_ids
           example:
-            - 713558707
-            - 406114007
+            - 33145645
+            - 987665106
+            - 172917859
+            - 2131785563
         shipping_option:
           type: integer
           description: shipping_option
-          example: 504430801
+          example: 1994660837
           format: int32
         storage_unit_price:
           type: number
           description: storage_unit_price
-          example: 0.8679009558209642
+          example: 0.3237766063541075
           format: double
         tenant_code:
           type: string
           description: tenant code
-          example: Porro tempore ex harum quaerat optio.
+          example: Iure quae eaque suscipit sapiente aut aut.
         tenant_id:
           type: integer
           description: tenant id
-          example: 1936499172
+          example: 395046746
           format: int32
         test_channel_id:
           type: array
           items:
             type: integer
-            example: 1393029225
+            example: 80454296
             format: int32
           description: test_channel_id
           example:
-            - 19437163
-            - 1358432744
-            - 917460248
+            - 2119867791
+            - 1223178007
+            - 713558707
+            - 406114007
         uk_tariff_number:
           type: string
           description: uk tariff number
-          example: Autem ullam consequatur laboriosam.
+          example: Reiciendis recusandae incidunt mollitia dolorem.
         us_tariff_number:
           type: string
           description: us tariff number
-          example: Incidunt mollitia dolorem animi sunt quis.
+          example: In et fuga.
       example:
-        balance: 0.30036785398493543
-        country_code: Incidunt omnis dolor.
-        currency: Nisi enim rem ut.
-        default_warehouse: 2037209586
-        first_inbound_at: Repellat fugiat quisquam praesentium.
-        handling_fee: 0.4458126418615676
-        prepay_tariff: true
+        balance: 0.9577232227153918
+        country_code: Ea id eos incidunt omnis.
+        currency: Veniam adipisci eligendi officiis enim autem.
+        default_warehouse: 2069698323
+        first_inbound_at: Et sed aut repellat.
+        handling_fee: 0.10429328079076863
+        prepay_tariff: false
         preset_channel_id:
+          - 22586907
+          - 1038568285
+        shipping_option: 473014523
+        storage_unit_price: 0.36626524688397677
+        tenant_code: Voluptas autem ullam consequatur laboriosam velit ab.
+        tenant_id: 1078355647
+        test_channel_id:
+          - 957375358
+          - 1815224793
           - 710692173
           - 887923991
-        shipping_option: 1499998499
-        storage_unit_price: 0.20299468439116541
-        tenant_code: Veniam adipisci eligendi officiis enim autem.
-        tenant_id: 677875371
-        test_channel_id:
-          - 1702826356
-          - 1344536638
-        uk_tariff_number: Voluptate id dolor molestias ut.
-        us_tariff_number: Dolorem sed unde.
+        uk_tariff_number: Molestias ut facilis sint.
+        us_tariff_number: Velit dolorem sed unde dolores voluptate id.
     TenantIntegrations:
       type: object
       properties:
@@ -10508,16 +10486,12 @@ components:
           example:
             - created_at: "2020-01-01T00:00:00Z"
               integration_at: "2020-01-01T00:00:00Z"
-              platform: Officiis sequi veniam.
-              store: Sunt recusandae sit distinctio provident inventore excepturi.
+              platform: Excepturi excepturi officiis sequi.
+              store: Incidunt magnam sunt recusandae sit distinctio provident.
             - created_at: "2020-01-01T00:00:00Z"
               integration_at: "2020-01-01T00:00:00Z"
-              platform: Officiis sequi veniam.
-              store: Sunt recusandae sit distinctio provident inventore excepturi.
-            - created_at: "2020-01-01T00:00:00Z"
-              integration_at: "2020-01-01T00:00:00Z"
-              platform: Officiis sequi veniam.
-              store: Sunt recusandae sit distinctio provident inventore excepturi.
+              platform: Excepturi excepturi officiis sequi.
+              store: Incidunt magnam sunt recusandae sit distinctio provident.
         message:
           type: string
           description: message
@@ -10527,16 +10501,12 @@ components:
         data:
           - created_at: "2020-01-01T00:00:00Z"
             integration_at: "2020-01-01T00:00:00Z"
-            platform: Officiis sequi veniam.
-            store: Sunt recusandae sit distinctio provident inventore excepturi.
+            platform: Excepturi excepturi officiis sequi.
+            store: Incidunt magnam sunt recusandae sit distinctio provident.
           - created_at: "2020-01-01T00:00:00Z"
             integration_at: "2020-01-01T00:00:00Z"
-            platform: Officiis sequi veniam.
-            store: Sunt recusandae sit distinctio provident inventore excepturi.
-          - created_at: "2020-01-01T00:00:00Z"
-            integration_at: "2020-01-01T00:00:00Z"
-            platform: Officiis sequi veniam.
-            store: Sunt recusandae sit distinctio provident inventore excepturi.
+            platform: Excepturi excepturi officiis sequi.
+            store: Incidunt magnam sunt recusandae sit distinctio provident.
         message: description error information
       required:
         - code
@@ -10558,28 +10528,27 @@ components:
       example:
         code: 0
         data:
-          balance: 0.9477167479705673
-          country_code: Eos quia aliquid.
-          currency: Inventore sint numquam ut quod dicta.
-          default_warehouse: 92657297
-          first_inbound_at: Eum sapiente deleniti ab necessitatibus sit.
-          handling_fee: 0.1728492202238933
-          prepay_tariff: true
+          balance: 0.38364842759814466
+          country_code: Ab necessitatibus sit rerum dolores distinctio qui.
+          currency: Beatae veniam ut rerum et.
+          default_warehouse: 1097042696
+          first_inbound_at: Optio odit voluptates repellat ipsa ut pariatur.
+          handling_fee: 0.14788487042617604
+          prepay_tariff: false
           preset_channel_id:
-            - 509453
-            - 1540341065
-            - 1371332417
-          shipping_option: 465550104
-          storage_unit_price: 0.2114585136779224
-          tenant_code: Sit est beatae veniam ut rerum et.
-          tenant_id: 1713995382
+            - 363365753
+            - 60079276
+            - 261595102
+          shipping_option: 521458496
+          storage_unit_price: 0.07159893437936704
+          tenant_code: Qui sit.
+          tenant_id: 607018834
           test_channel_id:
-            - 946562792
-            - 65549509
-            - 243623152
-            - 1590832825
-          uk_tariff_number: Debitis aut.
-          us_tariff_number: Impedit qui vero enim dignissimos.
+            - 2035206219
+            - 371190874
+            - 1196945775
+          uk_tariff_number: Dignissimos et debitis.
+          us_tariff_number: Quia aliquid culpa impedit qui vero.
         message: description error information
       required:
         - code
@@ -10647,6 +10616,8 @@ components:
                   timestamp: "2022-01-27 00:00:00"
                 - content: shipping done
                   timestamp: "2022-01-27 00:00:00"
+                - content: shipping done
+                  timestamp: "2022-01-27 00:00:00"
               order_id: YT000001,YT000002
               status: 0
               tracking_number: NSS193719374,NSS193719
@@ -10656,11 +10627,15 @@ components:
                   timestamp: "2022-01-27 00:00:00"
                 - content: shipping done
                   timestamp: "2022-01-27 00:00:00"
+                - content: shipping done
+                  timestamp: "2022-01-27 00:00:00"
               order_id: YT000001,YT000002
               status: 0
               tracking_number: NSS193719374,NSS193719
               tracking_url: http://example.com
             - details:
+                - content: shipping done
+                  timestamp: "2022-01-27 00:00:00"
                 - content: shipping done
                   timestamp: "2022-01-27 00:00:00"
                 - content: shipping done
@@ -10676,11 +10651,15 @@ components:
                 timestamp: "2022-01-27 00:00:00"
               - content: shipping done
                 timestamp: "2022-01-27 00:00:00"
+              - content: shipping done
+                timestamp: "2022-01-27 00:00:00"
             order_id: YT000001,YT000002
             status: 0
             tracking_number: NSS193719374,NSS193719
             tracking_url: http://example.com
           - details:
+              - content: shipping done
+                timestamp: "2022-01-27 00:00:00"
               - content: shipping done
                 timestamp: "2022-01-27 00:00:00"
               - content: shipping done
@@ -10728,13 +10707,6 @@ components:
                   timestamp: "2022-01-27 00:00:00"
                 - content: shipping done
                   timestamp: "2022-01-27 00:00:00"
-              order_id: YT000001,YT000002
-              status: 0
-              tracking_number: NSS193719374,NSS193719
-              tracking_url: http://example.com
-            - details:
-                - content: shipping done
-                  timestamp: "2022-01-27 00:00:00"
                 - content: shipping done
                   timestamp: "2022-01-27 00:00:00"
               order_id: YT000001,YT000002
@@ -10746,11 +10718,15 @@ components:
                   timestamp: "2022-01-27 00:00:00"
                 - content: shipping done
                   timestamp: "2022-01-27 00:00:00"
+                - content: shipping done
+                  timestamp: "2022-01-27 00:00:00"
               order_id: YT000001,YT000002
               status: 0
               tracking_number: NSS193719374,NSS193719
               tracking_url: http://example.com
             - details:
+                - content: shipping done
+                  timestamp: "2022-01-27 00:00:00"
                 - content: shipping done
                   timestamp: "2022-01-27 00:00:00"
                 - content: shipping done
@@ -11086,11 +11062,11 @@ components:
         country_code:
           type: string
           description: country code of tariff number
-          example: Repudiandae dolor sint non ea molestias.
+          example: Sint non ea molestias.
         default_warehouse:
           type: integer
           description: default warehouse
-          example: 694994984
+          example: 900878492
           format: int32
         prepay_tariff:
           type: boolean
@@ -11099,7 +11075,7 @@ components:
         shipping_option:
           type: integer
           description: shipping_option
-          example: 889064937
+          example: 645269308
           format: int32
         uk_tariff_number:
           type: string
@@ -11363,7 +11339,7 @@ components:
       example:
         code: 0
         data:
-          status: 6552914731070376616
+          status: 6161508919304162105
         message: description error information
       required:
         - code
