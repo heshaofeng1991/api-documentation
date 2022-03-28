@@ -4,7 +4,7 @@ info:
   description: NextSmartShip openapi for oms and wms
   version: "1.0"
 servers:
-  - url: https://openapi.dev.nextsmartship.com
+  - url: http://0.0.0.0:80
     description: Order Management Service
     variables:
       version:
