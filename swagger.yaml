@@ -4,10 +4,10 @@ info:
   description: NextSmartShip openapi for oms and wms
   version: "1.0"
 servers:
-  - url: https://uat..api.nextsmartship.com/v1
-    description: uat server
-  - url: https://api.nextsmartship.com/v1
-    description: prod server
+  - url: https://uat.api.nextsmartship.com
+    description: Uat Server
+  - url: https://api.nextsmartship.com
+    description: Prod Server
 paths:
   /v1/barcode:
     get:
